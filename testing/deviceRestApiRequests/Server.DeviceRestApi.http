@@ -1,0 +1,6 @@
+@DeviceRestApi_HostAddress = http://localhost:5050
+
+GET {{DeviceRestApi_HostAddress}}/api/post
+Accept: application/json
+
+###
