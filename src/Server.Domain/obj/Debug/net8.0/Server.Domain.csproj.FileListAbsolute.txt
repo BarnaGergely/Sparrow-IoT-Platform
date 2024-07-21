@@ -1,0 +1,11 @@
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\bin\Debug\net8.0\Server.Domain.deps.json
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\bin\Debug\net8.0\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\bin\Debug\net8.0\Server.Domain.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.AssemblyInfoInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.AssemblyInfo.cs
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.csproj.CoreCompileInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\refint\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\Server.Domain.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Domain\obj\Debug\net8.0\ref\Server.Domain.dll

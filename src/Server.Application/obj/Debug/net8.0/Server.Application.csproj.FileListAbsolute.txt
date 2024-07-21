@@ -1,0 +1,15 @@
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\bin\Debug\net8.0\Server.Application.deps.json
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\bin\Debug\net8.0\Server.Application.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\bin\Debug\net8.0\Server.Application.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\bin\Debug\net8.0\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\bin\Debug\net8.0\Server.Domain.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.csproj.AssemblyReference.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.AssemblyInfoInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.AssemblyInfo.cs
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.csproj.CoreCompileInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.A.E7C9053D.Up2Date
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\refint\Server.Application.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\Server.Application.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Application\obj\Debug\net8.0\ref\Server.Application.dll

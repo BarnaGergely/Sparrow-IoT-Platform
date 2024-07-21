@@ -1,0 +1,17 @@
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Infrastructure.deps.json
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Infrastructure.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Infrastructure.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Application.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Application.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\bin\Debug\net8.0\Server.Domain.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.AssemblyInfo.cs
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.I.7328B26C.Up2Date
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\refint\Server.Infrastructure.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\Server.Infrastructure.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.Infrastructure\obj\Debug\net8.0\ref\Server.Infrastructure.dll
