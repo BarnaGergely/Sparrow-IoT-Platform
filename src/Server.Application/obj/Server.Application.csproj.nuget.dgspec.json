@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {}
+    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {
+    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
+        "projectUniqueName": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
         "projectName": "Server.Application",
-        "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
+        "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
         "packagesPath": "C:\\Users\\clsta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Application\\obj\\",
+        "outputPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\clsta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj": {
-                "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj"
+              "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj": {
+                "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj": {
+    "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj",
         "projectName": "Server.Domain",
-        "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj",
+        "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj",
         "packagesPath": "C:\\Users\\clsta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.Domain\\obj\\",
+        "outputPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\clsta\\AppData\\Roaming\\NuGet\\NuGet.Config"

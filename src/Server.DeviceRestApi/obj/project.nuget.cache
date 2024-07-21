@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pHgeRcW0rQU=",
+  "dgSpecHash": "681qs4UUBLw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+  "projectFilePath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clsta\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.7\\microsoft.aspnetcore.openapi.8.0.7.nupkg.sha512",
     "C:\\Users\\clsta\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
