@@ -2,4 +2,4 @@
 
 namespace Server.Domain.Entities;
 
-public record SensorData<T>(Guid Id, DateTime Timestamp, T Value);
+public record SensorData(Guid Id, Guid DeviceId, Guid SensorId, DateTime Timestamp, dynamic Data);
