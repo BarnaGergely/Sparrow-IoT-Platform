@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "EHrNHz53/J0=",
+  "dgSpecHash": "j/6w3HzaVSI=",
   "success": true,
   "projectFilePath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Infrastructure\\Server.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\clsta\\.nuget\\packages\\dotnext\\5.7.0\\dotnext.5.7.0.nupkg.sha512",
+    "C:\\Users\\clsta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\clsta\\.nuget\\packages\\system.io.hashing\\8.0.0\\system.io.hashing.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
