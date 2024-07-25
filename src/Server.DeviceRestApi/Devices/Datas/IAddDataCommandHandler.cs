@@ -1,4 +1,6 @@
+using Server.Domain.Entities;
+
 public interface IAddDataCommandHandler
 {
-    void Handle(SensorDataRequest command);
+    void Handle(AddDeviceDataRequest command);
 }

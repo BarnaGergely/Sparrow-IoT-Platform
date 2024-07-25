@@ -1,1 +1,0 @@
-public record SensorField(Guid SensorId, string Value);
