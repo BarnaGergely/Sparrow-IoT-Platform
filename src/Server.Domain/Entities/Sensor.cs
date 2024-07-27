@@ -1,16 +1,10 @@
-public record Sensor
-{
-    public Guid Id { get; }
-    public string Name { get; }
-    public string Description { get; }
-    public Guid DeviceId { get; }
-    public Guid SensorDataTypeId { get; }
+using System.ComponentModel.DataAnnotations;
+namespace Server.Domain.Entities;
 
-    public Sensor(Guid id, string name, string description, Guid deviceId)
-    {
-        Id = id;
-        Name = name;
-        Description = description;
-        DeviceId = deviceId;
-    }
+public class Sensor {
+    public required Guid Id { get; set; }
+    public required string Name { get; set; }
+    public required string Description { get; set; }
+    //public required Device Device { get; set; }
+    public required IEnumerable<SensorValue> Values { get; set; }
 }

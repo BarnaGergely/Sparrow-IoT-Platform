@@ -3,9 +3,9 @@
 using Server.DeviceRestApi;
 using Server.Application;
 using Server.Infrastructure;
-using Server.Domain.Entities;
-using Server.Domain.Entities.SensorDataTypes;
 using DotNext;
+using Server.Domain.Entities.ApiEntities;
+using Server.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer(); // TODO: CHeck in swaggler docs that is it required in production environment
 builder.Services.AddSwaggerGen();
-builder.Services.AddProblemDetails(); // Add exception handling middleware
+//builder.Services.AddProblemDetails(); // Add exception handling middleware
 
 builder.Services
     .AddDeviceRestApi()
@@ -23,7 +23,7 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseExceptionHandler(); // TODO: check how is it works
+//app.UseExceptionHandler(); // TODO: check how is it works
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -34,7 +34,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/api/devices/datas", (AddDeviceDataRequest data) => {
+// https://stackoverflow.com/questions/28329788/pass-json-with-multi-type-lists-to-web-api
+app.MapPost("/api/devices/datas", (Sensor data) => {
     Results.Ok(data);
 }) // TODO: https://blog.jetbrains.com/dotnet/2023/04/25/introduction-to-asp-net-core-minimal-apis/
     .WithName("AddSensorData")
@@ -45,16 +46,31 @@ app.MapGet("/api/devices/commands", () => "0")
     .WithName("GetDeviceCommands")
     .WithDescription("Get commands for a device")
     .WithOpenApi();
-
-var device = new Device(Guid.NewGuid(), "Device 1", "Description 1");
-var sensor = new Sensor(Guid.NewGuid(), "Sensor 1", "Description 1", device.Id);
-var sensorData = new SensorDataInt(Guid.NewGuid(), sensor.Id, DateTime.Now, 1);
-var addDeviceDataRequest = new AddDeviceDataRequest
-{
-    DeviceId = device.Id,
-    Timestamp = DateTime.Now,
-    SensorDatas = [sensorData]
+/*
+Sensor sensor = new Sensor {
+    Id = Guid.NewGuid(),
+    Name = "Sensor 1",
+    Description = "Description",
+    Values = new List<SensorValue>{
+        new SensorValue<int>{
+            Id = 1,
+            ValueTyped = 1
+        },
+        new SensorValue<string>{
+            Id = 2,
+            ValueTyped = "2"
+        },
+        new SensorValue<double>{
+            Id = 3,
+            ValueTyped = 3.0
+        },
+        new SensorValue<bool>{
+            Id = 4,
+            ValueTyped = true
+        }
+    }
 };
+*/
 
 app.Run(); // TODO: Read port from configuration: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment
 // TODO: HTTPS: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment

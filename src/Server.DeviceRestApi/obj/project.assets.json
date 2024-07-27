@@ -646,11 +646,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+      "projectUniqueName": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
       "projectName": "Server.DeviceRestApi",
-      "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+      "projectPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
       "packagesPath": "C:\\Users\\clsta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\obj\\",
+      "outputPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\clsta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -665,11 +665,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {
-              "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj"
+            "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {
+              "projectPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj"
             },
-            "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Infrastructure\\Server.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Infrastructure\\Server.Infrastructure.csproj"
+            "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Infrastructure\\Server.Infrastructure.csproj": {
+              "projectPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Infrastructure\\Server.Infrastructure.csproj"
             }
           }
         }

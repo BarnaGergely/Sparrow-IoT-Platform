@@ -35,3 +35,46 @@ C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.DeviceRes
 C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.pdb
 C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.genruntimeconfig.cache
 C:\Users\clsta\OneDrive\Desktop\Gergely Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\ref\Server.DeviceRestApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\appsettings.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.DeviceRestApi.exe
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.DeviceRestApi.deps.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.DeviceRestApi.runtimeconfig.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.DeviceRestApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.DeviceRestApi.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\DotNext.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Application.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Domain.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Infrastructure.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Application.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Infrastructure.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\bin\Debug\net8.0\Server.Domain.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.csproj.AssemblyReference.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.AssemblyInfoInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.AssemblyInfo.cs
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.csproj.CoreCompileInputs.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.sourcelink.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets\msbuild.Server.DeviceRestApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets\msbuild.build.Server.DeviceRestApi.props
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Server.DeviceRestApi.props
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Server.DeviceRestApi.props
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\scopedcss\bundle\Server.DeviceRestApi.styles.css
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.D.4C7BD687.Up2Date
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\refint\Server.DeviceRestApi.dll
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.pdb
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\Server.DeviceRestApi.genruntimeconfig.cache
+C:\Users\clsta\OneDrive\Desktop\Gergely_Barna\Code\Szakdoga\src\Server.DeviceRestApi\obj\Debug\net8.0\ref\Server.DeviceRestApi.dll

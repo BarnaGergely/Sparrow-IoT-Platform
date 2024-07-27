@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nKcVykU7Wik=",
+  "dgSpecHash": "iynGPv4XwM4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
+  "projectFilePath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clsta\\.nuget\\packages\\dotnext\\5.7.0\\dotnext.5.7.0.nupkg.sha512",
     "C:\\Users\\clsta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",

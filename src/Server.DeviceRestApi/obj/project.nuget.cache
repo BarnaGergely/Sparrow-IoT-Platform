@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6db8iOlkOaU=",
+  "dgSpecHash": "GkH2E1AL6Ks=",
   "success": true,
-  "projectFilePath": "C:\\Users\\clsta\\OneDrive\\Desktop\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+  "projectFilePath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clsta\\.nuget\\packages\\dotnext\\5.7.0\\dotnext.5.7.0.nupkg.sha512",
     "C:\\Users\\clsta\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.7\\microsoft.aspnetcore.openapi.8.0.7.nupkg.sha512",

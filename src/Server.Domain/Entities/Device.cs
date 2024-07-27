@@ -1,14 +1,12 @@
+using System.ComponentModel.DataAnnotations;
 namespace Server.Domain.Entities;
 public record Device
 {
-    public Guid Id { get; }
-    public string Name { get; }
-    public string Description { get; }
-
-    public Device(Guid id, string name, string description)
-    {
-        Id = id;
-        Name = name;
-        Description = description;
-    }
+    [Key]
+    [Required]
+    public required Guid Id { get; set; }
+    [Required]
+    public required string Name { get; set; }
+    public string? Description { get; set; }
+    public IEnumerable<Sensor> Sensors { get; set; }
 }
