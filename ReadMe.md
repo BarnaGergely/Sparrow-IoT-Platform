@@ -1,7 +1,15 @@
 # IoT Server project]
 
-## Tasks
+## Problems
 
+### Modell classes
+
+A sensor data tarolasara tervezett modell osztalyok problemasak. Json Serializer nem tamogatja a generikusokat, polimorfizmust sem ugy ahogy nekem kene. A leghatekonyabb megoldas az lenne, ha irnak sajat convertert, de ez eleg komplikalt. Egyenlore megprobalom sima object kent eltarolni a json-t es kesobb cast-olni.
+
+## Tasks
+- Irnom kell egy sajat Json Convertert:
+  - https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/converters-how-to?pivots=dotnet-8-0#support-polymorphic-deserialization
+  - https://www.reddit.com/r/csharp/comments/1ecqxse/what_c_entities_should_i_create_to_store_a/
 - Create Device REST API
   - Create Model records
     - Entity framework friendly design: https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
