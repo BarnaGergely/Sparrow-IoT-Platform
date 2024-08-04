@@ -23,7 +23,7 @@ public class SensorV5
     public ICollection<MeasureV5> Measures { get; set; } = new List<MeasureV5>();
 }
 
-public record MeasureV5
+public interface IMeasureV5
 {
     public int Id { get; set; }
     public DateTime CreatedAt { get; set; }
@@ -31,12 +31,30 @@ public record MeasureV5
     public int SensorV5Id { get; set; }
 }
 
-public record MeasureTemperatureV5 : MeasureV5
+public interface IMeasureIntV5 : IMeasureV5
+{
+    public int Value { get; set; }
+}
+
+public interface IMeasureFloatV5 : IMeasureV5
 {
     public float Value { get; set; }
 }
 
-public record MeasurePercentageV5 : MeasureV5
+public record MeasureV5 : IMeasureV5
+{
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public SensorV5 SensorV5 { get; set; }
+    public int SensorV5Id { get; set; }
+}
+
+public record MeasureTemperatureV5 : MeasureV5, IMeasureFloatV5
+{
+    public float Value { get; set; }
+}
+
+public record MeasurePercentageV5 : MeasureV5, IMeasureIntV5
 {
     public int Value { get; set; }
 }
