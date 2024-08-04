@@ -15,7 +15,7 @@ public record DeviceV3
     public IEnumerable<SensorV3> Sensors { get; set; }
 }
 
-public class SensorV3
+public record SensorV3
 {
     public int Id { get; set; }
     public string Name { get; set; }

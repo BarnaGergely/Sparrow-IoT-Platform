@@ -4,22 +4,33 @@ using Microsoft.EntityFrameworkCore;
 
 public class TestingContext : DbContext
 {
-    public DbSet<DeviceV3> Devices { get; set; }
-    public DbSet<SensorV3> Sensors { get; set; }
-    public DbSet<SensorValueV3> SensorValues { get; set; }
-    public DbSet<SensorValueV3IntNumber> SensorValuesInt { get; set; }
-    public DbSet<SensorValueV3FloatNumber> SensorValuesFloat { get; set; }
+    public DbSet<DeviceV5> Devices { get; set; }
+    public DbSet<SensorV5> Sensors { get; set; }
+    public DbSet<MeasureV5> Measure { get; set; }
+    public DbSet<MeasureTemperatureV5> MeasureTemperature { get; set; }
+    public DbSet<MeasurePercentageV5> MeasurePercentage { get; set; }
     public string DbPath { get; }
 
     public TestingContext()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
-        DbPath = System.IO.Path.Join(path, "blogging.db");
+        DbPath = System.IO.Path.Join(path, "iot.db");
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         options.UseSqlite($"Data Source={DbPath}");
+
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<MeasureV5>()
+        .HasDiscriminator()
+        .HasValue<MeasureV5>("messure_base")
+        .HasValue<MeasureTemperatureV5>("temperature")
+        .HasValue<MeasurePercentageV5>("percentage");
+}
+
 }

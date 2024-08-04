@@ -84,22 +84,80 @@ var deviceV2 = new DeviceV2
     }
 };
 
+var deviceV5 = new DeviceV5
+{
+    Id = 1,
+    Name = "Device 3",
+    Description = "Device 3 description",
+    Sensors = new List<SensorV5>
+    {
+        new SensorV5
+        {
+            Id = 1,
+            DeviceV5Id = 1,
+            Name = "Sensor 1",
+            Description = "Sensor 1 description",
+            Measures = new List<MeasureV5>
+            {
+                new MeasureTemperatureV5
+                {
+                    SensorV5Id = 1,
+                    Value = 1.1f
+                },
+                new MeasureTemperatureV5
+                {
+                    SensorV5Id = 1,
+                    Value = 64.4f
+                }
+            }
+        },
+        new SensorV5
+        {
+            Id = 2,
+            DeviceV5Id = 1,
+            Name = "Sensor 2",
+            Description = "Sensor 2 description",
+            Measures = new List<MeasureV5>
+            {
+                new MeasurePercentageV5
+                {
+                    SensorV5Id = 2,
+                    Value = 1
+                },
+                new MeasurePercentageV5
+                {
+                    SensorV5Id = 2,
+                    Value = 64
+                }
+            }
+        }
+    }
+};
+
 using var context = new TestingContext();
 
-
-//context.Add(deviceV3);
-
+//context.Add(deviceV5);
 //context.SaveChanges();
 
 // get device
-DeviceV3 device = context.Devices.First();
+DeviceV5 device = context.Devices.First();
 
-SensorV3 sensor = context.Sensors.First();
+MeasureV5 measure = context.Sensors.FirstOrDefault().Measures.FirstOrDefault();
 
-Console.WriteLine($"Device: {device.Name}, {device.Id}");
-
-Console.WriteLine(deviceV2.Sensors.First().Messures.First().Value.GetType().Name);
-
-Console.WriteLine($"First data: {sensor.Messures.First().GetType().Name}");
+if (measure is null)
+{
+    Console.WriteLine("Failed to get measure");
+    return;
+} else if (measure is MeasureTemperatureV5 measureTemperature)
+{
+    Console.WriteLine($"Temperature measure: {measureTemperature.Value}");
+}
+else if (measure is MeasurePercentageV5 measurePercentage)
+{
+    Console.WriteLine($"Percentage measure: {measurePercentage.Value}");
+} else
+{
+    Console.WriteLine("Unknown measure type");
+}
 
 Console.WriteLine("______________Program finished__________________");

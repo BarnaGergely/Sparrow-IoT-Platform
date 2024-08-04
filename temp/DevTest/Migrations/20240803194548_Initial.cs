@@ -33,18 +33,17 @@ namespace DevTest.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
-                    DeviceV3Id = table.Column<int>(type: "INTEGER", nullable: true),
-                    DeviceId = table.Column<int>(type: "INTEGER", nullable: false),
-                    SensorValueV2TypeName = table.Column<string>(type: "TEXT", nullable: false)
+                    DeviceV5Id = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sensors", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Sensors_Devices_DeviceV3Id",
-                        column: x => x.DeviceV3Id,
+                        name: "FK_Sensors_Devices_DeviceV5Id",
+                        column: x => x.DeviceV5Id,
                         principalTable: "Devices",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,31 +53,31 @@ namespace DevTest.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    SensorV3Id = table.Column<int>(type: "INTEGER", nullable: true),
-                    SensorId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Discriminator = table.Column<string>(type: "TEXT", maxLength: 34, nullable: false),
-                    Value = table.Column<float>(type: "REAL", nullable: true),
-                    SensorValueV3IntNumber_Value = table.Column<int>(type: "INTEGER", nullable: true)
+                    SensorV5Id = table.Column<int>(type: "INTEGER", nullable: false),
+                    Discriminator = table.Column<string>(type: "TEXT", maxLength: 21, nullable: false),
+                    MeasurePercentageV5_Value = table.Column<int>(type: "INTEGER", nullable: true),
+                    Value = table.Column<float>(type: "REAL", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SensorValues", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SensorValues_Sensors_SensorV3Id",
-                        column: x => x.SensorV3Id,
+                        name: "FK_SensorValues_Sensors_SensorV5Id",
+                        column: x => x.SensorV5Id,
                         principalTable: "Sensors",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Sensors_DeviceV3Id",
+                name: "IX_Sensors_DeviceV5Id",
                 table: "Sensors",
-                column: "DeviceV3Id");
+                column: "DeviceV5Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SensorValues_SensorV3Id",
+                name: "IX_SensorValues_SensorV5Id",
                 table: "SensorValues",
-                column: "SensorV3Id");
+                column: "SensorV5Id");
         }
 
         /// <inheritdoc />

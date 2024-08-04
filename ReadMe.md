@@ -120,5 +120,73 @@ Az adatbazispan tipusonkent kulon tablaban szeretnem tarolni az adatokat es olyo
 Polimorfizmussal es generikusokkal lehetne szerintem szepen megoldani, de nem jottem meg ra a megoldasra.
 
 ```c#
+public record Device
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public IEnumerable<Sensor> Sensors { get; set; }
+}
 
+public record Sensor
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public Device? DeviceV3 { get; set; }
+    public int DeviceId { get; set; }
+    public ICollection<Measure> Measures { get; set; } = new List<Measure>();
+    public string MeasureTypeName { get; set; } = typeof(Measure).Name;
+}
+
+public record Measure
+{
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public SensorV3? SensorV3 { get; set; }
+    public int SensorId { get; set; }
+}
+
+public record MeasureIntNumber : Measure
+{
+    public int Value { get; set; }
+}
+
+public record MeasureFloatNumber : Measure
+{
+    public float Value { get; set; }
+}
+```
+
+```c#
+public record Device
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string? Description { get; set; }
+    public IEnumerable<Sensor> Sensors { get; set; }
+}
+
+public class Sensor
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public Device? Device { get; set; }
+    public int DeviceId { get; set; }
+    public ICollection<Measure> Measures { get; set; } = new List<Measure>();
+    public string SensorValueTypeName { get; set; } = typeof(Measure).Name;
+}
+
+public class Measure
+{
+    public int Id { get; set; }
+    public virtual object Value { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public Sensor Sensor { get; set; }
+    public int SensorId { get; set; }
+}
+
+public class Measure<T> : Measure
+{
+    public T ValueTyped { get; set; }
+    public override object Value { get => ValueTyped; set => ValueTyped = (T)value; }
+}
 ```

@@ -3,6 +3,7 @@ using System;
 using DevTest;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevTest.Migrations
 {
     [DbContext(typeof(TestingContext))]
-    partial class TestingContextModelSnapshot : ModelSnapshot
+    [Migration("20240803194846_Initial2")]
+    partial class Initial2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.7");
@@ -46,7 +49,7 @@ namespace DevTest.Migrations
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
-                        .HasMaxLength(13)
+                        .HasMaxLength(21)
                         .HasColumnType("TEXT");
 
                     b.Property<int>("SensorV5Id")
@@ -58,7 +61,7 @@ namespace DevTest.Migrations
 
                     b.ToTable("Measure");
 
-                    b.HasDiscriminator().HasValue("messure_base");
+                    b.HasDiscriminator().HasValue("MeasureV5");
 
                     b.UseTphMappingStrategy();
                 });
@@ -100,7 +103,7 @@ namespace DevTest.Migrations
                                 .HasColumnName("MeasurePercentageV5_Value");
                         });
 
-                    b.HasDiscriminator().HasValue("percentage");
+                    b.HasDiscriminator().HasValue("MeasurePercentageV5");
                 });
 
             modelBuilder.Entity("DevTest.MeasureTemperatureV5", b =>
@@ -110,7 +113,7 @@ namespace DevTest.Migrations
                     b.Property<float>("Value")
                         .HasColumnType("REAL");
 
-                    b.HasDiscriminator().HasValue("temperature");
+                    b.HasDiscriminator().HasValue("MeasureTemperatureV5");
                 });
 
             modelBuilder.Entity("DevTest.MeasureV5", b =>
