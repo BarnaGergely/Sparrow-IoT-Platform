@@ -1,6 +1,8 @@
-﻿namespace Server.DeviceRestApi.Devices.Datas.Entities;
+﻿using Server.Application.Measurements;
 
-public class SensorValueInRequest
+namespace Server.DeviceRestApi.Measurements.Entities;
+
+public class MeasurementInRequest
 {
     public required int SensorId { get; set; }
     public required object Value { get; set; }

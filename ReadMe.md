@@ -54,6 +54,14 @@ Not using it right now, because: [https://stackoverflow.com/questions/50663501/m
 
 ## Questions
 
+### Table-per-hierarchy or Table-per-type
+
+TPH
+
+### Where should the Id-s be created and how?
+
+### valami
+
 I want to create an ASP.NET REST API Post endpoint that only has a data property witch can be int, float or string and I want to store it in a sqlite database. What model classes (records) and data binding should I use? Does is solvable with c# generics?
 
 I want to create model classes for a databases, witch can store int, float or string values. The probles is, I want to create a generic interface for them. How can I do that?

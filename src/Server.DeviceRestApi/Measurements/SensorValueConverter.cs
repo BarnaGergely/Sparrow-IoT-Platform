@@ -1,9 +1,4 @@
-﻿using DotNext;
-using Server.Application.Devices.Sensors;
-using Server.DeviceRestApi.Devices.Datas.Entities;
-using Server.Domain.Entities;
-
-namespace Server.DeviceRestApi;
+﻿namespace Server.DeviceRestApi;
 /*
 public class SensorValueConverter
 {

@@ -20,7 +20,7 @@ public class SensorV5
     public string Description { get; set; }
     public DeviceV5? DeviceV5 { get; set; }
     public int DeviceV5Id { get; set; }
-    public ICollection<MeasureV5> Measures { get; set; } = new List<MeasureV5>();
+    public IEnumerable<MeasureV5> Measures { get; set; } = new List<MeasureV5>();
 }
 
 public interface IMeasureV5

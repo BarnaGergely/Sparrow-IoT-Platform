@@ -1,0 +1,1 @@
+namespace Server.Domain.Entities;

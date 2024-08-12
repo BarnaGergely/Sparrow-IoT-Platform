@@ -49,7 +49,11 @@
           "dependencies": {
             "DotNext": {
               "target": "Package",
-              "version": "[5.7.0, )"
+              "version": "[5.11.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",

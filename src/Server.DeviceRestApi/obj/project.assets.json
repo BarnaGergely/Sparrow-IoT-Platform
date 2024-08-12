@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "DotNext/5.7.0": {
+      "DotNext/5.11.0": {
         "type": "package",
         "dependencies": {
           "System.IO.Hashing": "8.0.0"
@@ -625,7 +625,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "DotNext": "5.7.0",
+          "DotNext": "5.11.0",
+          "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Server.Domain": "1.0.0"
         },
@@ -652,7 +653,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.7",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
-          "Server.Application": "1.0.0"
+          "Server.Application": "1.0.0",
+          "Server.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Server.Infrastructure.dll": {}
@@ -664,14 +666,14 @@
     }
   },
   "libraries": {
-    "DotNext/5.7.0": {
-      "sha512": "GvJ/eXmd52JxNBm4KCHZTJdAjoHClojksaU5ypr3gS48wMPHXnf70bmrU/BDy4VKmmm9wzT8V0CwPPhue5oFBA==",
+    "DotNext/5.11.0": {
+      "sha512": "aLWtURne05gwWFFsOg9/X1g4V5yHyuWHX5paQIN7pJIDLCbaCDHcQlLeRRvzvksjAflZJ7tTHkowN/Xi1NXPrA==",
       "type": "package",
-      "path": "dotnext/5.7.0",
+      "path": "dotnext/5.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnext.5.7.0.nupkg.sha512",
+        "dotnext.5.11.0.nupkg.sha512",
         "dotnext.nuspec",
         "lib/net8.0/DotNext.dll",
         "lib/net8.0/DotNext.xml",
@@ -1760,7 +1762,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "DotNext >= 5.7.0",
+      "DotNext >= 5.11.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.7",
       "Server.Application >= 1.0.0",
       "Server.Infrastructure >= 1.0.0",
@@ -1818,7 +1820,7 @@
         "dependencies": {
           "DotNext": {
             "target": "Package",
-            "version": "[5.7.0, )"
+            "version": "[5.11.0, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
