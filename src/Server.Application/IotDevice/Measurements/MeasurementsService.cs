@@ -1,7 +1,9 @@
 using DotNext;
+using Server.Application.Common.Entities;
+using Server.Application.Common.Interfaces;
 using Server.Domain.Entities;
 
-namespace Server.Application.Measurements;
+namespace Server.Application.IotDevice.Measurements;
 
 public class MeasurementsService : IMeasurementsService
 {

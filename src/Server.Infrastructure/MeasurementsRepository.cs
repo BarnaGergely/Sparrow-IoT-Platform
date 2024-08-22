@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Server.Application.Measurements;
+using Server.Application.Common.Interfaces;
 using Server.Domain.Entities;
 
 namespace Server.Infrastructure;

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Server.Domain.Entities;
 
-namespace Server.Application.Measurements;
+namespace Server.Application.Common.Interfaces;
 
 public interface IMeasurementsRepository
 {

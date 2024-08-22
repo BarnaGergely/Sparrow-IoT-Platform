@@ -1,6 +1,4 @@
-﻿using Server.Application.Measurements;
-
-namespace Server.DeviceRestApi.Measurements.Entities;
+﻿namespace Server.DeviceRestApi.Measurements.Entities;
 
 public class MeasurementInRequest
 {

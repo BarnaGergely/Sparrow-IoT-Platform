@@ -1,19 +1,15 @@
-using System;
 using DotNext;
+using Server.Application.Common.Entities;
 using Server.Domain.Entities;
 
-namespace Server.Application.Measurements;
 
-public interface IMeasurementsCommandHandler
-{
-    public Result<Nothing> AddMeasurements(AddMeasurementsCommand data);
-}
+namespace Server.Application.IotDevice.Measurements;
 
 public class MeasurementsCommandHandler : IMeasurementsCommandHandler
 {
     private readonly IMeasurementsService _service;
-    private readonly MeasurementsMapper _mapper;
-    public MeasurementsCommandHandler(IMeasurementsService service, MeasurementsMapper mapper)
+    private readonly IMeasurementsMapper _mapper;
+    public MeasurementsCommandHandler(IMeasurementsService service, IMeasurementsMapper mapper)
     {
         _service = service;
         _mapper = mapper;

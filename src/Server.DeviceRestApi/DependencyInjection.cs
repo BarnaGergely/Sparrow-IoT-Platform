@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Server.Application.Measurements;
-using Server.DeviceRestApi.Measurements;
+﻿using Server.Application.IotDevice.Measurements;
 
 namespace Server.DeviceRestApi;
 

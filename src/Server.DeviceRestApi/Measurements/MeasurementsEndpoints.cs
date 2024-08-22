@@ -1,4 +1,4 @@
-using Server.Application.Measurements;
+using Server.Application.IotDevice.Measurements;
 using Server.DeviceRestApi.Measurements.Entities;
 
 namespace Server.DeviceRestApi.Measurements;
@@ -7,8 +7,7 @@ public static class MeasurementsEndpoints
 {
     public static RouteGroupBuilder MapMeasurementsEndpoints(this RouteGroupBuilder group)
     {
-
-        // https://stackoverflow.com/questions/28329788/pass-json-with-multi-type-lists-to-web-api
+        // Docs: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/route-handlers?view=aspnetcore-8.0#route-groups
         group.MapPost("/", (
             AddDeviceDataRequest data,
             IMeasurementsCommandHandler handler
@@ -32,7 +31,7 @@ public static class MeasurementsEndpoints
                 if (!result.IsSuccessful)
                     return Results.BadRequest(result.Error.Message);
 
-                return Results.Ok();
+                return Results.Created();
             }) // TODO: https://blog.jetbrains.com/dotnet/2023/04/25/introduction-to-asp-net-core-minimal-apis/
                 .WithName("AddSensorData")
                 .WithDescription("Save sensor data on the server")

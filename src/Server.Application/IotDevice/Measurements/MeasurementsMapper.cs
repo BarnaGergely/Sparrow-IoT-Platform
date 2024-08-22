@@ -2,9 +2,14 @@ using Server.Domain.Entities;
 using DotNext;
 using System.Text.Json;
 
-namespace Server.Application.Measurements;
+namespace Server.Application.IotDevice.Measurements;
 
-public class MeasurementsMapper(IMeasurementsService measurementsService)
+public interface IMeasurementsMapper
+{
+    public Result<Measurement> Map(MeasurementRaw input);
+}
+
+public class MeasurementsMapper(IMeasurementsService measurementsService) : IMeasurementsMapper
 {
     public Result<Measurement> Map(MeasurementRaw input)
     {

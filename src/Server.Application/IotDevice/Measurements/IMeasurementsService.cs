@@ -1,6 +1,8 @@
-namespace Server.Application.Measurements;
 using DotNext;
 using Server.Domain.Entities;
+using Server.Application.Common.Entities;
+
+namespace Server.Application.IotDevice.Measurements;
 
 public interface IMeasurementsService
 {

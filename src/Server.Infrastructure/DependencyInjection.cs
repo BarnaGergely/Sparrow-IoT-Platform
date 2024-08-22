@@ -1,6 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Server.Application.Measurements;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Server.Application.Common.Interfaces;
 
 namespace Server.Infrastructure;
 

@@ -1,4 +1,4 @@
-namespace Server.Application.Measurements;
+namespace Server.Application.IotDevice.Measurements;
 
 public record class AddMeasurementsCommand
 {
