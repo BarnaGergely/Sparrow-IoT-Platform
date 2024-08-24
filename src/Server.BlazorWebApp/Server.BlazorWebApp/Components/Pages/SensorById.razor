@@ -1,0 +1,37 @@
+﻿@page "/sensors/{Id:int}"
+
+@using Server.Application.Common.Interfaces
+@using Server.Domain.Entities
+
+@inject IMeasurementsRepository MeasurementsRepository
+
+@attribute [StreamRendering]
+
+<PageTitle></PageTitle>
+
+@if (!isLoaded)
+{
+    <p><em>Loading...</em></p>
+}
+else if (sensor == null)
+{
+    <p><em>Sensor @(Id) not found</em></p>
+}
+else
+{
+    <h1>@sensor.Name</h1>
+}
+
+@code {
+    [Parameter] 
+    public int Id { get; set; }
+
+    private bool isLoaded;
+    private Sensor? sensor;
+
+    protected override async Task OnInitializedAsync()
+    {
+        sensor = MeasurementsRepository.Sensors.FirstOrDefault(s => s.Id == Id);
+        isLoaded = true;
+    }
+}

@@ -5,6 +5,14 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTest", "DevTest\DevTest.csproj", "{B9F8481A-96AD-4E82-BAB6-99016F270D7D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorTestApp", "BlazorTestApp", "{3414C4EA-ACF6-4EF2-83CD-4D86D336E896}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTestApp", "BlazorTestApp\BlazorTestApp\BlazorTestApp.csproj", "{4346D75B-E26D-4954-A23A-B8A4CC833921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTestApp.Client", "BlazorTestApp\BlazorTestApp.Client\BlazorTestApp.Client.csproj", "{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthTestAPI", "AuthTestAPI\AuthTestAPI.csproj", "{EFA2B3B4-21B1-4CA6-8728-514AB1334EC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +23,24 @@ Global
 		{B9F8481A-96AD-4E82-BAB6-99016F270D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9F8481A-96AD-4E82-BAB6-99016F270D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9F8481A-96AD-4E82-BAB6-99016F270D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4346D75B-E26D-4954-A23A-B8A4CC833921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4346D75B-E26D-4954-A23A-B8A4CC833921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4346D75B-E26D-4954-A23A-B8A4CC833921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4346D75B-E26D-4954-A23A-B8A4CC833921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA2B3B4-21B1-4CA6-8728-514AB1334EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA2B3B4-21B1-4CA6-8728-514AB1334EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA2B3B4-21B1-4CA6-8728-514AB1334EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA2B3B4-21B1-4CA6-8728-514AB1334EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4346D75B-E26D-4954-A23A-B8A4CC833921} = {3414C4EA-ACF6-4EF2-83CD-4D86D336E896}
+		{524D39B2-CE84-44C1-A9ED-22FC1E6BFD0F} = {3414C4EA-ACF6-4EF2-83CD-4D86D336E896}
 	EndGlobalSection
 EndGlobal

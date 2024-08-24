@@ -1,0 +1,23 @@
+﻿@page "/sensors"
+
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Server.Application.Common.Interfaces
+@using Server.Domain.Entities
+@using Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter;
+
+@attribute [StreamRendering]
+@inject IMeasurementsRepository MeasurementsRepository
+
+<PageTitle>Sensors</PageTitle>
+
+<h1>Sensors</h1>
+
+<p>This component lists the avaliable sensors.</p>
+
+
+<QuickGrid Items="@MeasurementsRepository.Sensors">
+    <PropertyColumn Property="@(s => s.Id)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Name)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Kind)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Device)" Sortable="true" />
+</QuickGrid>

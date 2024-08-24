@@ -1,7 +1,11 @@
+/*
 using Server.DeviceRestApi;
 using Server.Application;
 using Server.Infrastructure;
 using Server.DeviceRestApi.Measurements;
+
+//TODO: Deprecated, delete it
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +13,9 @@ builder.Services.AddEndpointsApiExplorer(); // TODO: CHeck in swaggler docs that
 builder.Services.AddSwaggerGen();
 
 builder.Services
-    .AddDeviceRestApi()
-    .AddApplication()
-    .AddInfrastructure();
+    .AddDeviceRestApiDependencies()
+    .AddApplicationDependencies()
+    .AddInfrastructureDependencies();
 
 //builder.Services.AddProblemDetails(); // Add exception handling middleware
 
@@ -36,3 +40,5 @@ app.MapGroup("/api/measure")
 
 app.Run(); // TODO: Read port from configuration: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment
            // TODO: HTTPS: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment
+
+*/
