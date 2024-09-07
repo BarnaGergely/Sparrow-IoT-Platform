@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CK4Z6BCQEvw=",
+  "dgSpecHash": "TiO0vVqPbM94Am0gQGNcaWK75+uXgNSExkiPxJ7IdcwnY2yFBSdgopiqC3GtoJfFALLd51gsM+kyb/kYUTCuXw==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Domain\\Server.Domain.csproj",
+  "projectFilePath": "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.Domain\\Server.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

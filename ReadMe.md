@@ -1,200 +1,65 @@
-# IoT Server project]
+﻿# Sparrow IoT Platform - Open Source agricultural .NET Core IoT Server
 
-## Problems
+This is an easy to use self-hostable IoT platform for farmers and gardeners. Designed to offer a cheap and simple way to monitor local environmental conditions and automate watering and heating systems.
 
-### Modell classes
+**⚠️This project is under development, not working right now.⚠️**
 
-A sensor data tarolasara tervezett modell osztalyok problemasak. Json Serializer nem tamogatja a generikusokat, polimorfizmust sem ugy ahogy nekem kene. A leghatekonyabb megoldas az lenne, ha irnak sajat convertert, de ez eleg komplikalt. Egyenlore megprobalom sima object kent eltarolni a json-t es kesobb cast-olni.
+## Goal
 
-## Tasks
-- Irnom kell egy sajat Json Convertert:
-  - https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/converters-how-to?pivots=dotnet-8-0#support-polymorphic-deserialization
-  - https://www.reddit.com/r/csharp/comments/1ecqxse/what_c_entities_should_i_create_to_store_a/
-- Create Device REST API
-  - Create Model records
-    - Entity framework friendly design: https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
-    - Property vs Constructor
-    - id vs list - relationships: https://learn.microsoft.com/en-us/ef/core/modeling/relationships
-    - polymoirph data storing
-    - Can I let models be changable?
-  - Learn how to manage db with Entity framework efficiently
-  - create REST endpoint
-    - optional properties
-    - data binding
+Years ago my family bio farm wanted some kind of temperature monitoring, low-temperature warning, and irrigation automatizing system, we tried many kinds of solutions, but we couldn't find any affordable and reliable one. 
 
-## Notes
+- Industrial Agricultural IoT Systems
+	- Very expensive
+	- Very reliable
+	- Very easy to setup and use
+- [Arduino Cloud](https://cloud.arduino.cc/), [Blynk](https://blynk.io/) - Cloud-based IoT systems
+	- Not cheap, but much better
+	- Easy to build and use
+	- Evolving fast, which makes them not enough reliable for us
+	- Most of them do not store enough data
+- [Home Assistant](https://www.home-assistant.io/), [OpenHAB](https://www.openhab.org/) - Self-hosted Open Source solutions
+	- Running the server on our computer is expensive and complicated
+	- They are very complex, so hard to setup and use
+	- You can do anything with them
+	- The maintenance takes a lot of time
 
-### TODO: Use Unit of Work pattern
+We need a simple, reliable, and in the long-term cheap solution to build data logging, visualizing, and automating systems for small farms and gardens.
 
-### MediatR
+## Our Solution
 
-Not using it right now, because: [https://stackoverflow.com/questions/50663501/mediatr-when-and-why-i-should-use-it](https://stackoverflow.com/questions/50663501/mediatr-when-and-why-i-should-use-it)
+Is a simple Dockerized .NET Core + Blazor IoT server, which can run on the cheapest VPS or a Raspberry Pi and some cheap ESP32-based IoT devices. It is designed to be easy to use, easy to setup, and easy to maintain.
 
-### Architecture
+To make the setup process as easy as possible, we are planning to create tutorials in the platform, so you can build full agriculture automatization systems without coding with easy to follow step by step guides, which contain everything from assembling the ESP32, through uploading the firmware to customizing the dashboard.
 
-- [https://wkrzywiec.medium.com/ports-adapters-architecture-on-example-19cab9e93be7](https://wkrzywiec.medium.com/ports-adapters-architecture-on-example-19cab9e93be7)
+### Features
 
-## Database and Model class plan
+- Easily Hostable on cheap VPS or Raspberry Pi
+- No maintenance required
+- Simple, responsive, and customizable dashboard
+- Data logging and visualization
+- Alerts and notifications
+- Reliable automatization
 
-- Device
-  - Name
-  - Description
-  - Id
-  - Sensors list (Input variables usually)
-    - Sensor
-      - Name
-      - Description
-      - Id
-      - Data type (int, double, float, string, temperature, percentage, Volt, Amper, Time, ...)
-      - Datas List
-        - Data
-          - Value
-          - DateTime
-          - Id
+## Information for Developers
 
-## Questions
+This project is in the early development phase, not ready for production use.
 
-### Table-per-hierarchy or Table-per-type
+### Project Documentation
 
-TPH
+- [Base idea](https://docs.google.com/document/d/1oyASZ_bG17uwzgr_NtaMfHdZ23nmU8OKUYntWb3Y-co/edit?usp=sharing)
+- [Requirements](https://docs.google.com/document/d/1Xc6wAokgXtEZXZMK82HhEkOIH8bnE58knpkK7C6dygk/edit?usp=sharing)
+- [System Design](https://docs.google.com/document/d/17BKCvN3vBGUPituyRiiUNVXURcatZrLEXiF8VPOVh7I/edit?usp=sharing)
 
-### Where should the Id-s be created and how?
+### Architecture Overview
 
-### valami
+![Architecture Overview](architecture-overview.png)
 
-I want to create an ASP.NET REST API Post endpoint that only has a data property witch can be int, float or string and I want to store it in a sqlite database. What model classes (records) and data binding should I use? Does is solvable with c# generics?
+The server was built with onion architecture and SOLID principles to make it extendable and testable.
 
-I want to create model classes for a databases, witch can store int, float or string values. The probles is, I want to create a generic interface for them. How can I do that?
+- **Application.Core** - Contains the domain model and interfaces
+- **Application.Application** - Contains the application services
+- **Application.Infrastructure** - Contains the Database and logging implementations
+- **Application.DeviceRestApi** - Contains an ASP.NET Core Web API for the IoT devices
+- **Application.BlazorWebInterface** - Contains the Blazor WebAssembly frontend
 
-What C# Entities should I create to store jsons like this?
-
-```json
-{
-  "deviceId": 12456,
-  "sensorValues": [
-    {"sensorId": 1, "value": 0.5},
-    {"sensorId": 2, "value": 1},
-    {"sensorId": 12, "value1": "Something happened!", "value2": 13},
-    {"sensorId": 25, "value": 56},
-    {"sensorId": 4, "value": 3.8}
-  ] 
-}
-```
-
-Szeretnek egy ASP.NET minimal REST API-t kesziteni IoT eszkozokkel mert adatok fogadasara. Minden eszkoznek tobb kulonbozo tipusu adatokat szolgaltato szenzora lehet pl.: egeszszam, tortszam, szazalek, szoveg, feszultseg. A jovoben bovulni fog ez a loosly typed lista.
-
-A sensorId alapjan meg lehet mondani milyen formatumunak kellene lennie az adott objektumnak. Irhatok egy sajat Model Binder-t, de nem tudom milyen rekords kellene tarolni az adatokat.
-
-Ha irok egy sajat Model Binder-t az elvileg meg a megfelelo formatumra is tudja konvertalni, de milyen Entity-ket kellene letre hozzak egy ilyen adat szerkezet eltarolasara?
-
-Ez nem egy fordulo kod, de valami hasonlora lenne szerintem szuksegem.
-
-```c#
-public record Device
-{
-    public int Id { get; set; }
-    public IEnumerable<Sensor> Sensors { get; set; } // This is not valid
-}
-
-public record Sensor<T> where T : ISensorDataType
-{
-    public required int Id { get; set; }
-    public required Device Device { get; set; }
-    public required IEnumerable<ISensorDataType> SensorValues { get; set; } // This is not valid
-}
-
-public interface ISensorDataType
-{
-    public object Value { get; set; }
-}
-
-public class SensorDataInt : ISensorDataType
-{
-    public override int Value { get; set; } // This is not valid
-}
-
-public class SensorDataString : ISensorDataType
-{
-    public override string Value { get; set; } // This is not valid
-}
-```
-
-
-
-Szeretnek egy ehhez hasonlo post requestek eltarolasara alkalmas REST API-t kesziteni ASP.NET-el. A problemam hogy nem tudom milyen modell osztalyokat lenne erdemes letre hozni amik kepesek tobbfele tipust kezelni es adatbazisban eltarolhatok.
-
-Az adatbazispan tipusonkent kulon tablaban szeretnem tarolni az adatokat es olyon modell osztalyokat szeretnek melyek erosen tipusosak, lejet tudni melyik rekord milyen tipusu adatot tartalmaz.
-
-Polimorfizmussal es generikusokkal lehetne szerintem szepen megoldani, de nem jottem meg ra a megoldasra.
-
-```c#
-public record Device
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public IEnumerable<Sensor> Sensors { get; set; }
-}
-
-public record Sensor
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public Device? DeviceV3 { get; set; }
-    public int DeviceId { get; set; }
-    public ICollection<Measure> Measures { get; set; } = new List<Measure>();
-    public string MeasureTypeName { get; set; } = typeof(Measure).Name;
-}
-
-public record Measure
-{
-    public int Id { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public SensorV3? SensorV3 { get; set; }
-    public int SensorId { get; set; }
-}
-
-public record MeasureIntNumber : Measure
-{
-    public int Value { get; set; }
-}
-
-public record MeasureFloatNumber : Measure
-{
-    public float Value { get; set; }
-}
-```
-
-```c#
-public record Device
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string? Description { get; set; }
-    public IEnumerable<Sensor> Sensors { get; set; }
-}
-
-public class Sensor
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public Device? Device { get; set; }
-    public int DeviceId { get; set; }
-    public ICollection<Measure> Measures { get; set; } = new List<Measure>();
-    public string SensorValueTypeName { get; set; } = typeof(Measure).Name;
-}
-
-public class Measure
-{
-    public int Id { get; set; }
-    public virtual object Value { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public Sensor Sensor { get; set; }
-    public int SensorId { get; set; }
-}
-
-public class Measure<T> : Measure
-{
-    public T ValueTyped { get; set; }
-    public override object Value { get => ValueTyped; set => ValueTyped = (T)value; }
-}
-```
+## Usage - not ready yet

@@ -1123,32 +1123,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\clsta\\.nuget\\packages\\": {}
+    "C:\\Users\\gery\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+      "projectUniqueName": "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
       "projectName": "Server.DeviceRestApi",
-      "projectPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
-      "packagesPath": "C:\\Users\\clsta\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.DeviceRestApi\\obj\\",
+      "projectPath": "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.DeviceRestApi\\Server.DeviceRestApi.csproj",
+      "packagesPath": "C:\\Users\\gery\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.DeviceRestApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\clsta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\gery\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj": {
-              "projectPath": "C:\\Temp\\Gergely_Barna\\Code\\Szakdoga\\src\\Server.Application\\Server.Application.csproj"
+            "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.Application\\Server.Application.csproj": {
+              "projectPath": "C:\\Users\\gery\\Source\\Repos\\BarnaGergely\\Sparrow-IoT-Platform\\src\\Server.Application\\Server.Application.csproj"
             }
           }
         }
@@ -1200,7 +1202,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
