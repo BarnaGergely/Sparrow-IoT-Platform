@@ -21,7 +21,7 @@
     <ProjectReference Include="..\Server.BlazorWebApp\Server.BlazorWebApp\Server.BlazorWebApp.csproj" />
   
     <!-- Blazor -->
-    <ProjectReference Include="..\Server.BlazorWebApp.Client\Server.BlazorWebApp.Client.csproj" />
+    <ProjectReference Include="..\Server.BlazorWebApp\Server.BlazorWebApp.Client\Server.BlazorWebApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />

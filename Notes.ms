@@ -1,5 +1,15 @@
 # IoT Server Notes
 
+## Tutorials
+
+- Angular
+    - Acourse made by the developers, good start: [https://angular.io/tutorial/tour-of-heroes](Tour of Heroes)
+    - [https://www.youtube.com/playlist?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ](Basic teories)
+    - Maximilian Udemy are good
+- Integrate angular with asp.net core
+    - [https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-angular?view=vs-2022] by Microsoft
+    - [https://youtu.be/fqR-WbmX8PM?si=s8kJlPSWl4oSX2GL](Youtube 6 moths ago)
+
 ## Problems
 
 ### Modell classes
