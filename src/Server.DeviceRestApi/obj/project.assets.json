@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "DotNext/5.11.0": {
+      "DotNext/5.14.0": {
         "type": "package",
         "dependencies": {
           "System.IO.Hashing": "8.0.0"
@@ -384,14 +384,14 @@
     }
   },
   "libraries": {
-    "DotNext/5.11.0": {
-      "sha512": "aLWtURne05gwWFFsOg9/X1g4V5yHyuWHX5paQIN7pJIDLCbaCDHcQlLeRRvzvksjAflZJ7tTHkowN/Xi1NXPrA==",
+    "DotNext/5.14.0": {
+      "sha512": "wyRjcjQISQJpLtKTKacLKUGP80AT28WVRHq0etmFJywdeHrUfjyLgrfnSA5sk1ZcdL/55jRalRfm6MyhXOImMw==",
       "type": "package",
-      "path": "dotnext/5.11.0",
+      "path": "dotnext/5.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "dotnext.5.11.0.nupkg.sha512",
+        "dotnext.5.14.0.nupkg.sha512",
         "dotnext.nuspec",
         "lib/net8.0/DotNext.dll",
         "lib/net8.0/DotNext.xml",
@@ -1149,7 +1149,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "DotNext >= 5.11.0",
+      "DotNext >= 5.14.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.7",
       "Server.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -1201,7 +1201,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -1211,7 +1211,7 @@
         "dependencies": {
           "DotNext": {
             "target": "Package",
-            "version": "[5.11.0, )"
+            "version": "[5.14.0, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -1241,19 +1241,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: DotNext from 5.14.0 to 5.11.0. Reference the package directly from the project to select a different version. \r\n Server.DeviceRestApi -> Server.Application -> DotNext (>= 5.14.0) \r\n Server.DeviceRestApi -> DotNext (>= 5.11.0)",
-      "libraryId": "DotNext",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

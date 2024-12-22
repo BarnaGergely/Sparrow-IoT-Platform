@@ -1,4 +1,16 @@
+# IoT Server Notes 2025
+
+## Tasks
+
+## Sources
+
+- [https://www.reddit.com/r/dotnet/comments/1fxblvt/results_pattern_in_net/](Reddit about Result pattern)
+- Effective work in Windows, VS, VS Code
+- API versioning
+- .NET 8 migration to .NET 9
+
 # IoT Server Notes
+
 
 ## Tutorials
 
