@@ -1,16 +1,7 @@
 using Server.DeviceRestApi;
 using Server.Application;
 using Server.Infrastructure;
-using Server.BlazorWebApp;
-
-// only for Blazor test
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Server.BlazorWebApp.Client.Pages;
-using Server.BlazorWebApp.Components;
-using Server.BlazorWebApp.Components.Account;
-using Server.BlazorWebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,29 +12,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Module service registration
 builder.Services
-    .AddDeviceRestApiServices()
-    .AddBlazorWebAppServices();
+    .AddDeviceRestApiServices();
 
 // Dependency injection
 builder.Services
     .AddDeviceRestApiDependencies()
     .AddApplicationDependencies()
-    .AddInfrastructureDependencies()
-    .AddBlazorWebAppDependencies();
-
-
-// Test Blazor example
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+    .AddInfrastructureDependencies();
 
 var app = builder.Build();
 
 //app.UseDeveloperExceptionPage(); // Blazor exception handler TODO: integrate it, find how to use it
 
 app.ConfigureDeviceRestApi();
-app.ConfigureBlazorWebApp();
 
 app.Run(); // TODO: Read port from configuration: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment
            // TODO: HTTPS: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0#read-the-port-from-environment
