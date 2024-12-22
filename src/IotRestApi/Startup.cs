@@ -28,12 +28,6 @@ public static class Startup
 
     public static WebApplication ConfigureIotRestApi(this WebApplication app)
     {
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.MapOpenApi();
-        }
-
         RouteGroupBuilder groupBuilder = app.MapGroup("iot")
             .WithName("IoT Devices")
             .WithDescription("APIs to communicate with IoT devices")
