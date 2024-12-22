@@ -1,0 +1,1 @@
+namespace Domain.IotDevice.Entities;

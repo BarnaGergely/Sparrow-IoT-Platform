@@ -1,24 +1,24 @@
 using Application;
 using Infrastructure;
-using ThingRestApi;
+using IotRestApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Service registration
 builder.Services
-    .AddThingRestApiServices();
+    .AddIoTRestApiServices();
 
 // Dependency injection
 builder.Services
     .AddApplicationDependencies()
     .AddInfrastructureDependencies()
-    .AddThingRestApiDependencies();
+    .AddIotRestApiDependencies();
 
 var app = builder.Build();
-
 app.UseHttpsRedirection();
+// app.UseExceptionHandler(); // TODO: Add exception handling middleware
 
 // REST Endpoint registration
-app.ConfigureThingRestApi();
+app.ConfigureIotRestApi();
 
 app.Run();

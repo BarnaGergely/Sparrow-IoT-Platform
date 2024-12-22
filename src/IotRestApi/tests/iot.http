@@ -1,0 +1,25 @@
+@Startup_HostAddress = http://localhost:5141/iot
+
+GET {{Startup_HostAddress}}/hello/
+#Accept: application/json
+
+###
+
+GET {{Startup_HostAddress}}/measure/
+Accept: application/json
+
+###
+
+POST {{Startup_HostAddress}}/measure/
+Content-Type:  application/json
+{
+  "deviceId": 1,
+  "measurements": [
+    {
+      "sensorId": 1,
+      "value": 12.4
+    }
+  ]
+}
+
+###

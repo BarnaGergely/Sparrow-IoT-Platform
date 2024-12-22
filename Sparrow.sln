@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{8E8783DE-BFA5-43E4-BB12-BCBF9EC0D7C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThingRestApi", "src\ThingRestApi\ThingRestApi.csproj", "{842935E2-B24E-4BB3-A609-67C529240DBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotRestApi", "src\IotRestApi\IotRestApi.csproj", "{842935E2-B24E-4BB3-A609-67C529240DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
