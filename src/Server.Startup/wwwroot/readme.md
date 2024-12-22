@@ -1,1 +1,0 @@
-TODO: this folder is on wrong place. We need to move it and the config files to the Blazor's folder, but I cant change the webroot and the content root location.
