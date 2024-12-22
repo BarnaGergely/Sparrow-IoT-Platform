@@ -1,6 +1,0 @@
-@AuthTestAPI_HostAddress = http://localhost:5094
-
-GET {{AuthTestAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
