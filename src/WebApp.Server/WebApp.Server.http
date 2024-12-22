@@ -1,4 +1,4 @@
-@AngularAppTemplate.Server_HostAddress = http://localhost:5105
+@AngularAppTemplate.Server_HostAddress = http://localhost:5105/api/app
 
 GET {{AngularAppTemplate.Server_HostAddress}}/weatherforecast/
 Accept: application/json
