@@ -33,5 +33,5 @@ export class AppComponent implements OnInit {
     );
   }
 
-  title = 'angularapptemplate.client';
+  title = 'webapp.client';
 }

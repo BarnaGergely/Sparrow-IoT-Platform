@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularapptemplate.client": {
+    "webapp.client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularapptemplate.client",
+            "outputPath": "dist/webapp.client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,22 +60,22 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angularapptemplate.client:build:production"
+              "browserTarget": "webapp.client:build:production"
             },
             "development": {
-              "browserTarget": "angularapptemplate.client:build:development"
+              "browserTarget": "webapp.client:build:development"
             }
           },
           "defaultConfiguration": "development",
           "options": {
             "proxyConfig": "src/proxy.conf.js",
-            "port": 57989
+            "port": 55107
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularapptemplate.client:build"
+            "browserTarget": "webapp.client:build"
           }
         },
         "test": {
