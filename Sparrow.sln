@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotRestApi", "src\IotRestApi\IotRestApi.csproj", "{842935E2-B24E-4BB3-A609-67C529240DBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Server", "WebApp.Server\WebApp.Server.csproj", "{9DE74E7B-BE77-46B3-B7D2-0EDD54F25773}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webapp.client", "webapp.client\webapp.client.esproj", "{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,16 @@ Global
 		{842935E2-B24E-4BB3-A609-67C529240DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{842935E2-B24E-4BB3-A609-67C529240DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{842935E2-B24E-4BB3-A609-67C529240DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE74E7B-BE77-46B3-B7D2-0EDD54F25773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE74E7B-BE77-46B3-B7D2-0EDD54F25773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE74E7B-BE77-46B3-B7D2-0EDD54F25773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE74E7B-BE77-46B3-B7D2-0EDD54F25773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DBE1827-412F-476C-BDC9-E9F5E7C37DE3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
