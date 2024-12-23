@@ -34,7 +34,7 @@ public static class Startup
             app.MapOpenApi();
         }
 
-        RouteGroupBuilder groupBuilder = app.MapGroup("iot")
+        RouteGroupBuilder groupBuilder = app.MapGroup("api").MapGroup("iot")
             .WithName("IoT Devices")
             .WithDescription("APIs to communicate with IoT devices")
             .WithTags("IoT");

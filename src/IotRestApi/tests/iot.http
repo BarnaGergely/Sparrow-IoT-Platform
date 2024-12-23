@@ -1,4 +1,4 @@
-@Startup_HostAddress = http://localhost:5141/iot
+@Startup_HostAddress = http://localhost:5141/api/iot
 
 GET {{Startup_HostAddress}}/hello/
 #Accept: application/json
