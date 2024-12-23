@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Common.Data;
 
-public class MeasurementsContext : DbContext
+public class IotContext : DbContext
 {
     public DbSet<Device> Devices { get; set; }
     public DbSet<Sensor> Sensors { get; set; }
     public DbSet<Measurement> Measurements { get; set; }
     private string DbPath { get; set; }
 
-    public MeasurementsContext() : base()
+    public IotContext() : base()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);

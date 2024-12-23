@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Common.Data.Migrations
 {
-    [DbContext(typeof(MeasurementsContext))]
+    [DbContext(typeof(IotContext))]
     partial class MeasurementsContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

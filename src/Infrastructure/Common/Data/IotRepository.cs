@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Common.Data;
 
-public class MeasurementsRepository : IMeasurementsRepository
+public class IotRepository : IIotRepository
 {
-    private readonly MeasurementsContext _context;
+    private readonly IotContext _context;
 
-    public MeasurementsRepository(MeasurementsContext context)
+    public IotRepository(IotContext context)
     {
         _context = context;
     }

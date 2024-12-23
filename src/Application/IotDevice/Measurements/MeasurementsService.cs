@@ -7,8 +7,8 @@ namespace Application.IotDevice.Measurements;
 
 public class MeasurementsService : IMeasurementsService
 {
-    private readonly IMeasurementsRepository _repository;
-    public MeasurementsService(IMeasurementsRepository repository)
+    private readonly IIotRepository _repository;
+    public MeasurementsService(IIotRepository repository)
     {
         _repository = repository;
     }

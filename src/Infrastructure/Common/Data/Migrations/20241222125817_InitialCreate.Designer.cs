@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Common.Data.Migrations
 {
-    [DbContext(typeof(MeasurementsContext))]
+    [DbContext(typeof(IotContext))]
     [Migration("20241222125817_InitialCreate")]
     partial class InitialCreate
     {

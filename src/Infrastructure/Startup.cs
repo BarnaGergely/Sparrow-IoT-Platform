@@ -13,8 +13,8 @@ public static class Startup
 
     public static IServiceCollection AddInfrastructureDependencies(this IServiceCollection services)
     {
-        services.AddDbContext<MeasurementsContext>();
-        services.AddScoped<IMeasurementsRepository, MeasurementsRepository>();
+        services.AddDbContext<IotContext>();
+        services.AddScoped<IIotRepository, IotRepository>();
         return services;
     }
 }

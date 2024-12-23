@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Common.Interfaces;
 
-public interface IMeasurementsRepository
+public interface IIotRepository
 {
     public DbSet<Device> Devices { get; set; }
     public DbSet<Sensor> Sensors { get; set; }
