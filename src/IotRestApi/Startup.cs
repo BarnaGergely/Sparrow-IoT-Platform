@@ -26,7 +26,7 @@ public static class Startup
         return services;
     }
 
-    public static WebApplication ConfigureIotRestApi(this WebApplication app)
+    public static IEndpointRouteBuilder ConfigureIotRestApiEndpoints(this IEndpointRouteBuilder app)
     {
         RouteGroupBuilder groupBuilder = app.MapGroup("iot")
             .WithName("IoT Devices")
