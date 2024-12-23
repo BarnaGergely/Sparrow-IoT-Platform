@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <SpaRoot>..\webapp.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
-    <SpaProxyServerUrl>https://localhost:56746</SpaProxyServerUrl>
+    <SpaProxyServerUrl>https://localhost:60958</SpaProxyServerUrl>
   </PropertyGroup>
 
   <ItemGroup>
