@@ -1,4 +1,6 @@
-﻿using static WebApp.Server.Startup;
+﻿using Application.Web;
+using Domain.IotDevice.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApp.Server;
 
@@ -30,11 +32,51 @@ public static class DevicesEndpoints
         })
         .WithName("GetWeatherForecast");
 
-        group.MapGet("/devices", () =>
+        group.MapGet("/devices", async (IWebRepository repository) =>
         {
-            return "Hello, World!";
+            return await repository.Devices.ToListAsync();
+
         })
-        .WithName("GetDevices");
+        .WithName("GetAllDevices");
+
+        group.MapGet("/devices/{id}", async (IWebRepository repository, int id) =>
+        {
+            return await repository.Devices.FindAsync(id)
+                is Device device
+                ? Results.Ok(device)
+                : Results.NotFound();
+        })
+        .WithName("GetDeviceById");
+
+        group.MapPost("/devices", async (IWebRepository repository, Device device) =>
+        {
+            repository.Devices.Add(device);
+            await repository.SaveChangesAsync();
+            return Results.Created($"/devices/{device.Id}", device);
+        });
+
+        group.MapPut("/devices/{id}", async (int id, Device device, IWebRepository repository) =>
+        {
+            var existingDevice = await repository.Devices.FindAsync(id);
+            if (existingDevice is null) return Results.NotFound();
+
+            existingDevice.Name = device.Name;
+
+            await repository.SaveChangesAsync();
+            return Results.NoContent();
+        });
+
+        group.MapDelete("/devices/{id}", async (IWebRepository repository, int id) =>
+        {
+            if (repository.Devices.Find(id) is Device device)
+            {
+                repository.Devices.Remove(device);
+                await repository.SaveChangesAsync();
+                return Results.NoContent();
+            }
+
+            return Results.NotFound();
+        });
 
         return group;
     }

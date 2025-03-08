@@ -1,9 +1,9 @@
-import { Device } from "./device.model";
+import { Measurement } from "./measurement.model";
 
 export interface Sensor {
     id: number;
     name: string;
-    measurments: string;
     kind: number;
     deviceId: number;
+    measurements?: Measurement[];
 }

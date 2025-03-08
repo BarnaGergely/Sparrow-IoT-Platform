@@ -1,0 +1,9 @@
+<h1>Devices</h1>
+
+@if (!devices) {
+    <p>Loading...</p>
+} @else if (devices && devices.length < 0) { 
+    <p>No devices found</p>
+} @else {
+    <p>{{ devices | json }}</p>
+}

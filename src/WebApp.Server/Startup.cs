@@ -52,9 +52,11 @@ public static class Startup
 
         var apiGroup = app.MapGroup("api");
         apiGroup.MapGroup("web")
-            .MapGroup("auth").MapIdentityEndpoints()
             .MapDevicesEndpoints()
-            .MapMeasurementsEndpoints();
+            .MapSensorsEndpoints()
+            .MapMeasurementsEndpoints()
+            .MapGroup("auth")
+                .MapIdentityEndpoints();
 
         return app;
     }
