@@ -1,12 +1,28 @@
+using Application;
+using Infrastructure;
 using WebApp.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddWebAppServerServices();
-builder.Services.AddWebAppServerDependencies();
+// Service registration
+builder.Services
+    .AddWebAppServerServices()
+    .AddWebAppServerDependencies()
+    .AddOpenApiServices();
+
+// Dependency injection
+builder.Services
+    .AddApplicationDependencies()
+    .AddInfrastructureDependencies()
+    .AddOpenApiDependencies();
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
+// app.UseExceptionHandler(); // TODO: Add exception handling middleware
+
+// REST Endpoint registration and other config
+app.ConfigureOpenApi();
 app.ConfigureWebAppServer();
 
 app.Run();

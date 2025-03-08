@@ -1,16 +1,18 @@
 ﻿using Domain.IotDevice.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Common.Data;
 
-public class IotContext : DbContext
+public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Device> Devices { get; set; }
     public DbSet<Sensor> Sensors { get; set; }
     public DbSet<Measurement> Measurements { get; set; }
     private string DbPath { get; set; }
 
-    public IotContext() : base()
+    public ApplicationDbContext() : base()
     {
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
@@ -22,6 +24,8 @@ public class IotContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<Device>().HasData(
             new Device { Id = 1, Name = "Device 1" },
             new Device { Id = 2, Name = "Device 2" }

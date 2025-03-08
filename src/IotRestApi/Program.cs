@@ -6,13 +6,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Service registration
 builder.Services
-    .AddIoTRestApiServices();
+    .AddIoTRestApiServices()
+    .AddOpenApiServices();
 
 // Dependency injection
 builder.Services
     .AddApplicationDependencies()
     .AddInfrastructureDependencies()
-    .AddIotRestApiDependencies();
+    .AddIotRestApiDependencies()
+    .AddOpenApiDependencies();
 
 var app = builder.Build();
 app.UseHttpsRedirection();
@@ -20,5 +22,6 @@ app.UseHttpsRedirection();
 
 // REST Endpoint registration
 app.ConfigureIotRestApi();
+app.ConfigureOpenApi();
 
 app.Run();

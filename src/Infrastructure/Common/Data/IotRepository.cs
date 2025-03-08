@@ -6,9 +6,9 @@ namespace Infrastructure.Common.Data;
 
 public class IotRepository : IIotRepository
 {
-    private readonly IotContext _context;
+    private readonly ApplicationDbContext _context;
 
-    public IotRepository(IotContext context)
+    public IotRepository(ApplicationDbContext context)
     {
         _context = context;
     }
