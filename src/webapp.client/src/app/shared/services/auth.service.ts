@@ -10,6 +10,17 @@ export class AuthService {
 
   http: HttpClient = inject(HttpClient);
 
+  isLoggedIn: boolean = false;
+
+  constructor() { 
+    setInterval(() => {
+      this.isLoggedIn = this.checkIsLoggedIn();
+      if (!this.isLoggedIn) {
+        console.warn('User is not logged in');
+      }
+    }, 10000);
+  }
+
   // TODO: specify the return type
   login(user: User) {
     return this.http.post<void>(environment.apiUrl + '/auth/login', {
@@ -26,6 +37,7 @@ export class AuthService {
   logout() {
     // delete auth cookie
     document.cookie = '.AspNetCore.Identity.Application=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    this.isLoggedIn = false;
   }
 
   // TODO: specify the return type
@@ -36,7 +48,7 @@ export class AuthService {
     });
   }
 
-  isLoggedIn(): boolean {
+  checkIsLoggedIn(): boolean {
     const authCookie = document.cookie.split('; ').find(row => row.startsWith('.AspNetCore.Identity.Application='));
     return !!authCookie;
   }
