@@ -11,7 +11,7 @@ import { Device } from '../models/device.model';
 export class SensorsService {
   private http: HttpClient = inject(HttpClient);
 
-  apiUrl = environment.apiUrl + '/sensors';
+  apiUrl = environment.apiUrl + '/protected/sensors';
 
   getAll(): Observable<Sensor[]> {
     return this.http.get<Sensor[]>(this.apiUrl);

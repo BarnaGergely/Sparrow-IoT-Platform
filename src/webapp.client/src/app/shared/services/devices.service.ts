@@ -10,7 +10,7 @@ import { Device } from '../models/device.model';
 export class DevicesService {
   http: HttpClient = inject(HttpClient);
 
-  private apiUrl = environment.apiUrl + '/devices';
+  private apiUrl = environment.apiUrl + '/protected/devices';
 
   getAll(): Observable<Device[]> {
     return this.http.get<Device[]>(this.apiUrl);

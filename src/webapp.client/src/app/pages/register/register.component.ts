@@ -42,4 +42,8 @@ export class RegisterComponent {
     });
   }
 
+  logout() {
+    this.authService.logout();
+  }
+
 }

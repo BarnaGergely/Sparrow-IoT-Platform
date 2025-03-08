@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { User } from '../models/user.model';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +22,9 @@ export class AuthService {
     }, 10000);
   }
 
-  // TODO: specify the return type
+  // TODO: specify the return type, track login status
   login(user: User) {
-    return this.http.post<void>(environment.apiUrl + '/auth/login', {
+    return this.http.post<void>(environment.apiUrl + '/public/auth/login', {
       "email": user.email,
       "password": user.password,
     }, {
@@ -42,7 +43,7 @@ export class AuthService {
 
   // TODO: specify the return type
   register(user: User) {
-    return this.http.post<void>(environment.apiUrl + '/auth/register', {
+    return this.http.post<void>(environment.apiUrl + '/public/auth/register', {
       "email": user.email,
       "password": user.password,
     });

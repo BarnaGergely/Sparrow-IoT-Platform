@@ -9,7 +9,7 @@ import { Sensor } from '../models/sensor.model';
   providedIn: 'root'
 })
 export class MeasurementsService {
-  private apiUrl = environment.apiUrl + '/measurements';
+  private apiUrl = environment.apiUrl + '/protected/measurements';
 
   constructor(private http: HttpClient) {}
 

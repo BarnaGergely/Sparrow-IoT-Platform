@@ -1,4 +1,4 @@
-@AuthApp.Server_HostAddress = http://localhost:5162/api/web
+@AuthApp.Server_HostAddress = http://localhost:5162/api/web/public
 
 POST {{AuthApp.Server_HostAddress}}/auth/register
 Content-Type: application/json

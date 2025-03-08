@@ -50,13 +50,13 @@ public static class Startup
 
         app.UseHttpsRedirection();
 
-        var apiGroup = app.MapGroup("api");
-        apiGroup.MapGroup("web")
+        var apiGroup = app.MapGroup("api").MapGroup("web");
+        var protectedGroup = apiGroup.MapGroup("protected").RequireAuthorization()
             .MapDevicesEndpoints()
             .MapSensorsEndpoints()
-            .MapMeasurementsEndpoints()
-            .MapGroup("auth")
-                .MapIdentityEndpoints();
+            .MapMeasurementsEndpoints();
+        var authGroup = apiGroup.MapGroup("public").MapGroup("auth")
+            .MapIdentityEndpoints();
 
         return app;
     }
