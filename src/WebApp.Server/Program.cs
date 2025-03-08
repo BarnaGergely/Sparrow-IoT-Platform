@@ -7,14 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Service registration
 builder.Services
     .AddWebAppServerServices()
-    .AddWebAppServerDependencies()
-    .AddOpenApiServices();
+    .AddWebAppServerDependencies();
 
 // Dependency injection
 builder.Services
     .AddApplicationDependencies()
-    .AddInfrastructureDependencies()
-    .AddOpenApiDependencies();
+    .AddInfrastructureDependencies();
 
 var app = builder.Build();
 

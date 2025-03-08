@@ -1,5 +1,4 @@
 using Application.Common.Entities;
-using Application.Common.Interfaces;
 using Domain.IotDevice.Entities;
 using DotNext;
 

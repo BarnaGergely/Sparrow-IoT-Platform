@@ -2,14 +2,14 @@
 
 namespace WebApp.Server;
 
-public static class WebAppEndpoints
+public static class DevicesEndpoints
 {
     internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
     {
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 
-    public static IEndpointRouteBuilder MapDeviceEndpoints(this IEndpointRouteBuilder group)
+    public static IEndpointRouteBuilder MapDevicesEndpoints(this IEndpointRouteBuilder group)
     {
         var summaries = new[]
         {

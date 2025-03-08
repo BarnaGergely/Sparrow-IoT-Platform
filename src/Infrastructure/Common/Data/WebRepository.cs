@@ -1,14 +1,14 @@
-using Application.IotDevice;
+using Application.Web;
 using Domain.IotDevice.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Common.Data;
 
-public class IotRepository : IIotRepository
+public class WebRepository : IWebRepository
 {
     private readonly ApplicationDbContext _context;
 
-    public IotRepository(ApplicationDbContext context)
+    public WebRepository(ApplicationDbContext context)
     {
         _context = context;
     }

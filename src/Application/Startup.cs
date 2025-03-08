@@ -1,5 +1,6 @@
 ﻿using Application.IotDevice.Measurements;
 using Application.IotDevice.Measurements;
+using Application.Web;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application;

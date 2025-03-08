@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Application.Common.Interfaces;
 using Infrastructure.Common.Data;
+using Application.IotDevice;
+using Application.Web;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure;
 
@@ -8,6 +10,7 @@ public static class Startup
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
     {
+
         return services;
     }
 
@@ -15,6 +18,7 @@ public static class Startup
     {
         services.AddDbContext<ApplicationDbContext>();
         services.AddScoped<IIotRepository, IotRepository>();
+        services.AddScoped<IWebRepository, WebRepository>();
         return services;
     }
 }

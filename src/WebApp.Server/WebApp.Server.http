@@ -4,3 +4,5 @@ GET {{WebApp.Server_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+# For more info on HTTP files go to https://aka.ms/vs/httpfile

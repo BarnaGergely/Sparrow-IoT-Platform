@@ -1,0 +1,30 @@
+@AuthApp.Server_HostAddress = http://localhost:5162/api/web
+
+POST {{AuthApp.Server_HostAddress}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "admin1@admin.Com",
+  "password": "admin1@admin.Com"
+}
+
+###
+
+POST {{AuthApp.Server_HostAddress}}/auth/login?useCookies=true
+Access-Control-Allow-Credentials: true
+Content-Type: application/json
+
+{
+  "email": "admin1@admin.Com",
+  "password": "admin1@admin.Com"
+}
+
+###
+
+GET {{AuthApp.Server_HostAddress}}/weatherforecast
+Access-Control-Allow-Credentials: true
+Accept: application/json
+
+###
+
+# For more info on HTTP files go to https://aka.ms/vs/httpfile

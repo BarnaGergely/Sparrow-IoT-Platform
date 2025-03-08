@@ -1,7 +1,7 @@
 using Domain.IotDevice.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Common.Interfaces;
+namespace Application.IotDevice;
 
 public interface IIotRepository
 {

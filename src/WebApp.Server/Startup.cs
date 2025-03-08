@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Infrastructure.Common.Data;
-using System;
+﻿using Infrastructure.Common.Data;
+using Microsoft.AspNetCore.Identity;
+using WebApp.Server.Auth;
+using WebApp.Server.Measurements;
+
 
 namespace WebApp.Server;
 
@@ -12,29 +12,17 @@ public static class Startup
     {
         services.AddAuthorization();
 
-        // Add services to the container.
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        services.AddOpenApi();
+        // TODO: move it to the Infrastructure layer
         services.AddIdentityApiEndpoints<IdentityUser>()
             .AddEntityFrameworkStores<ApplicationDbContext>();
+
+        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+        services.AddOpenApi();
 
         return services;
     }
 
     public static IServiceCollection AddWebAppServerDependencies(this IServiceCollection services)
-    {
-        services.AddOpenApi();
-        return services;
-    }
-
-    public static IServiceCollection AddOpenApiServices(this IServiceCollection services)
-    {
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        services.AddOpenApi();
-        return services;
-    }
-
-    public static IServiceCollection AddOpenApiDependencies(this IServiceCollection services)
     {
         return services;
     }
@@ -64,8 +52,9 @@ public static class Startup
 
         var apiGroup = app.MapGroup("api");
         apiGroup.MapGroup("web")
-            .MapDeviceEndpoints()
-            .MapGroup("auth").MapIdentityEndpoints();
+            .MapGroup("auth").MapIdentityEndpoints()
+            .MapDevicesEndpoints()
+            .MapMeasurementsEndpoints();
 
         return app;
     }
