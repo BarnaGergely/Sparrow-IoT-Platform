@@ -6,19 +6,21 @@ import { RegisterComponent } from './pages/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { authGuard } from './shared/guards/auth.guard';
 import { DevicesComponent } from './pages/devices/devices.component';
+import { HomePublicComponent } from './pages/home-public/home-public.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'devices', component: DevicesComponent },
-  //{ path: '**', component: NotFoundComponent },
   {
     path: '',
     canActivate: [authGuard],
     children: [
+      { path: '', component: HomeComponent },
+      { path: 'devices', component: DevicesComponent },
     ]
-  }
+  },
+  { path: '', component: HomePublicComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  //{ path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

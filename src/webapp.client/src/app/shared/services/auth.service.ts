@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { User } from '../models/user.model';
-import { tap } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +13,13 @@ export class AuthService {
 
   isLoggedIn: boolean = false;
 
-  constructor() { 
+  constructor() {
     setInterval(() => {
-      this.isLoggedIn = this.checkIsLoggedIn();
-      if (!this.isLoggedIn) {
-        console.warn('User is not logged in');
-      }
+      this.checkIsLoggedIn().subscribe(() => {
+        if (!this.isLoggedIn) {
+          console.warn('User is not logged in');
+        }
+      });
     }, 10000);
   }
 
@@ -49,8 +50,20 @@ export class AuthService {
     });
   }
 
-  checkIsLoggedIn(): boolean {
-    const authCookie = document.cookie.split('; ').find(row => row.startsWith('.AspNetCore.Identity.Application='));
-    return !!authCookie;
+  checkIsLoggedIn(): Observable<boolean> {
+    return new Observable<boolean>(observer => {
+      this.http.get<User>(environment.apiUrl + '/protected').subscribe({
+        next: () => {
+          this.isLoggedIn = true;
+          observer.next(true);
+          observer.complete();
+        },
+        error: () => {
+          this.isLoggedIn = false;
+          observer.next(false);
+          observer.complete();
+        }
+      });
+    });
   }
 }

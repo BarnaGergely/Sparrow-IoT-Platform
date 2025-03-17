@@ -1,6 +1,7 @@
 <h2>Login</h2>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input type="email" placeholder="Email" formControlName="email">
-    <input type="password" placeholder="Password" formControlName="password">
-    <button type="submit">Login</button>
+    <input type="email" pInputText placeholder="Email" formControlName="email">
+    <p-password placeholder="Password" formControlName="password" [feedback]="false">
+    </p-password>
+    <p-button label="Login" type="submit" />
 </form>

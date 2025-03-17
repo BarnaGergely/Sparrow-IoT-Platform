@@ -11,3 +11,23 @@
 `ng generate component pages/home`
 
 - ASP.NET Minimal API up to date docs with examples: https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api
+
+# Tasks
+
+- 18 Create very basic navigation menu
+    - Devices
+    - Dashboard
+    - Home
+- 19 Create devices page
+    - List devices in a list
+    - delete button
+- 20 Create device info page
+- 22 - Edit, create, delete device
+- 23 Sensors list on device page
+- 26 - Edit, create, delete sensor
+- 28 - Visualize one graph on dashboard
+- 29 - customize dashboard
+- 31 - Create step by step setup guide
+- Auth guard
+- Better Auth service
+- Better 

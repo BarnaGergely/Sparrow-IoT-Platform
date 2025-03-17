@@ -54,7 +54,11 @@ public static class Startup
         var protectedGroup = apiGroup.MapGroup("protected").RequireAuthorization()
             .MapDevicesEndpoints()
             .MapSensorsEndpoints()
-            .MapMeasurementsEndpoints();
+            .MapMeasurementsEndpoints()
+            .MapGet("/", () =>
+            {
+                return Results.Ok();
+            });
         var authGroup = apiGroup.MapGroup("public").MapGroup("auth")
             .MapIdentityEndpoints();
 
