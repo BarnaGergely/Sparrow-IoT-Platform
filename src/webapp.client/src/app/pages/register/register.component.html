@@ -1,17 +1,13 @@
 <h2>Sign Up</h2>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input pInputText type="email" placeholder="Email" formControlName="email">
-    <p-password placeholder="Password" formControlName="password" autocomplete="off">
-        <ng-template #footer>
-            <p-divider />
-            <ul class="pl-2 ml-2 my-0 leading-normal">
-                <li>At least one lowercase</li>
-                <li>At least one uppercase</li>
-                <li>At least one numeric</li>
-                <li>At least one special</li>
-                <li>Minimum 8 characters</li>
-            </ul>
-        </ng-template>
-    </p-password>
-    <p-button label="Register" type="submit" />
+    <input pInputText type="email" placeholder="Email">
+    <input type="password" placeholder="Password" autocomplete="off">
+    <ul>
+        <li>At least one lowercase</li>
+        <li>At least one uppercase</li>
+        <li>At least one numeric</li>
+        <li>At least one special</li>
+        <li>Minimum 8 characters</li>
+    </ul>
+    <button type="submit">Register</button>
 </form>

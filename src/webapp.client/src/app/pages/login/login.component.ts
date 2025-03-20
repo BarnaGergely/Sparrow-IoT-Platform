@@ -3,14 +3,9 @@ import { AuthService } from '../../shared/services/auth.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { User } from '../../shared/models/user.model';
-import { InputTextModule } from 'primeng/inputtext';
-import { PasswordModule } from 'primeng/password';
-import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
-
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, InputTextModule, PasswordModule, ButtonModule ],
+  imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
