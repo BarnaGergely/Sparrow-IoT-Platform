@@ -1,0 +1,34 @@
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { Device } from '../../shared/models/device.model';
+import { DevicesService } from '../../shared/services/devices.service';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { SensorsService } from '../../shared/services/sensors.service';
+import { Sensor } from '../../shared/models/sensor.model';
+import { EditDeviceComponent } from "./edit-device/edit-device.component";
+
+@Component({
+  selector: 'app-device',
+  imports: [RouterLink, EditDeviceComponent],
+  templateUrl: './device.component.html',
+  styleUrl: './device.component.scss'
+})
+export class DeviceComponent implements OnInit {
+  private devicesService: DevicesService = inject(DevicesService);
+  private sensorsService: SensorsService = inject(SensorsService);
+  private route: ActivatedRoute = inject(ActivatedRoute);
+  device?: Device;
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id') as unknown as number;
+      this.devicesService.getById(id).subscribe
+        ((device: Device) => {
+          this.device = device;
+          this.sensorsService.getByDeviceId(device.id).subscribe((sensors: Sensor[]) => {
+            device.sensors = sensors;
+          });
+        });
+    });
+  }
+
+}

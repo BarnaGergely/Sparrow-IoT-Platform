@@ -8,6 +8,7 @@ import { authGuard } from './shared/guards/auth.guard';
 import { DevicesComponent } from './pages/devices/devices.component';
 import { HomePublicComponent } from './pages/home-public/home-public.component';
 import { DashboardsComponent } from './pages/dashboards/dashboards.component';
+import { DeviceComponent } from './pages/device/device.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'devices', component: DevicesComponent },
+      { path: 'devices/:id', component: DeviceComponent },
       { path: 'dashboards', component: DashboardsComponent },
     ]
   },

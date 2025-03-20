@@ -1,0 +1,23 @@
+@if (!device) {
+    <p>Loading...</p>
+} @else {
+    <h1>{{device.name}}</h1>
+    <ul>
+        <li>Status: {{device.status || "unknown"}}</li>
+    </ul>
+    <app-edit-device [device]="device"></app-edit-device>
+    <h2>Sensors</h2>
+    @if (!device.sensors) {
+        <p>Loading...</p>
+    } @else if (device.sensors && device.sensors.length < 0) {
+        <p>No sensors found</p>
+    } @else {
+        <ul>
+            @for (sensor of device.sensors; track $index) {
+                <li>
+                    <a [routerLink]="['/devices', device.id, 'sensors', sensor.id]">{{ sensor.name }}</a>
+                </li>
+            }
+        </ul>
+    }
+}

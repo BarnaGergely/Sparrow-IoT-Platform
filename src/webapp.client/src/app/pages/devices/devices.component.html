@@ -5,5 +5,11 @@
 } @else if (devices && devices.length < 0) { 
     <p>No devices found</p>
 } @else {
-    <p>{{ devices | json }}</p>
+    <ul>
+        @for (device of devices; track $index) {
+            <li [ngStyle]="{'color': getStatusColor(device)}">
+                <a [routerLink]="['/devices', device.id]" [ngStyle]="{'color': getStatusColor(device)}">{{ device.name }}</a>
+            </li>
+        }
+    </ul>
 }
