@@ -1,3 +1,5 @@
+/// <reference types="@angular/localize" />
+
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app/app-routing.module';
