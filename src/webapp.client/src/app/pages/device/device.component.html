@@ -3,21 +3,33 @@
 } @else {
     <h1>{{device.name}}</h1>
     <ul>
+        <li>ID: {{device.id}}</li>
         <li>Status: {{device.status || "unknown"}}</li>
     </ul>
-    <app-edit-device [device]="device"></app-edit-device>
+    <app-device-editor-modal [device]="device" (changedEvent)="onDeviceChanged()">Edit</app-device-editor-modal>
     <h2>Sensors</h2>
     @if (!device.sensors) {
         <p>Loading...</p>
-    } @else if (device.sensors && device.sensors.length < 0) {
-        <p>No sensors found</p>
     } @else {
-        <ul>
-            @for (sensor of device.sensors; track $index) {
-                <li>
-                    <a [routerLink]="['/devices', device.id, 'sensors', sensor.id]">{{ sensor.name }}</a>
-                </li>
-            }
-        </ul>
+        <app-sensor-editor [device]="device" (changedEvent)="onSensorChanged()">Add</app-sensor-editor>
+        @if (device.sensors && device.sensors.length <= 0) {
+            <p>No sensors found</p>
+        } @else {
+            <ul>
+                @for (sensor of device.sensors; track $index) {
+                    <li>
+                        <h3><a [routerLink]="['/devices', device.id, 'sensors', sensor.id]">{{ sensor.name }}</a></h3>
+                        <ul>
+                            <li>ID: {{ sensor.id }}</li>
+                            <li>Type: {{measurementKindToString(sensor.kind)}}</li>
+                            <li>Last seen: </li>
+                            <li>Last value: </li>
+                        </ul>
+                        <app-sensor-editor [device]="device" [sensor]="sensor" (changedEvent)="onSensorChanged()">Edit</app-sensor-editor>
+                        <button (click)="deleteSensor(sensor)" class="btn">Delete</button>
+                    </li>
+                }
+            </ul>
+        }
     }
 }

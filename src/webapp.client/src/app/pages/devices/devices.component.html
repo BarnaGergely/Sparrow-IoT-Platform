@@ -1,15 +1,17 @@
 <h1>Devices</h1>
 
 @if (!devices) {
-    <p>Loading...</p>
-} @else if (devices && devices.length < 0) { 
-    <p>No devices found</p>
-} @else {
+<p>Loading...</p>
+} @else if (devices && devices.length < 0) { <p>No devices found</p>
+    <app-device-editor-modal>Add Device</app-device-editor-modal>
+    } @else {
+    <app-device-editor-modal (deviceChangedEvent)="ondeviceChanged()">Add Device</app-device-editor-modal>
     <ul>
         @for (device of devices; track $index) {
-            <li [ngStyle]="{'color': getStatusColor(device)}">
-                <a [routerLink]="['/devices', device.id]" [ngStyle]="{'color': getStatusColor(device)}">{{ device.name }}</a>
-            </li>
+        <li>
+            <a [routerLink]="['/devices', device.id]" [ngStyle]="{'color': getStatusColor(device)}">{{ device.name}}</a>
+            - <a role="button" (click)="deleteDevice(device)">delete</a>
+        </li>
         }
     </ul>
-}
+    }

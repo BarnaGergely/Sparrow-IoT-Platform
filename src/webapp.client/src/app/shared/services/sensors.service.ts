@@ -37,11 +37,11 @@ export class SensorsService {
     return this.http.post<void>(this.apiUrl, sensor);
   }
 
-  update(id: number, sensor: Sensor): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/${id}`, sensor);
+  update(sensor: Sensor): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${sensor.id}`, sensor);
   }
 
-  delete(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  delete(sensor: Sensor): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${sensor.id}`);
   }
 }

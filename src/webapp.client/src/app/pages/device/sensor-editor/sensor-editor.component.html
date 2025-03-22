@@ -1,0 +1,30 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">{{title}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(modal)">
+        <div class="modal-body">
+            <input type="text" id="id" class="form-control" formControlName="id" readonly hidden />
+            <input type="text" id="deviceId" class="form-control" formControlName="deviceId" readonly hidden />
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" formControlName="name" required />
+            </div>
+            <div class="form-group">
+                <label for="kind">Type</label>
+                <select name="kind" id="kind">
+                    <option *ngFor="let kind of measurementKindArray" [value]="kind.value">
+                        {{ kind.key }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-secondary" [disabled]="form.invalid">Save</button>
+        </div>
+    </form>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)"><ng-content></ng-content></button>

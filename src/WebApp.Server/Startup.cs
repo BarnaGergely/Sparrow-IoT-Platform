@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Common.Data;
 using Microsoft.AspNetCore.Identity;
 using WebApp.Server.Auth;
+using WebApp.Server.Devices;
 using WebApp.Server.Measurements;
 
 
