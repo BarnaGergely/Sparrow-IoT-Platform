@@ -22,9 +22,9 @@ export class SensorEditorComponent {
   @Output() changedEvent: EventEmitter<void> = new EventEmitter<void>();
   form = this.formBuilder.group({
     id: [0, []],
-    deviceId: [0, [Validators.required]],
+    deviceId: [this.device.id, [Validators.required]],
     name: ['', [Validators.required]],
-    kind: [0, [Validators.required]],
+    kind: [MeasurementKind.Temperature, [Validators.required]],
   });
   title: string = 'Create Sensor';
 
@@ -72,9 +72,9 @@ export class SensorEditorComponent {
     }
 
     const sensor = this.form.value as Sensor;
+    console.log(sensor);
 
     if (this.isUpdate()) {
-      console.log("update");
       this.sensorsService.update(sensor).subscribe({
         next: () => {
           this.changedEvent.emit();
@@ -86,7 +86,6 @@ export class SensorEditorComponent {
         },
       });
     } else {
-      console.log("create");
       this.sensorsService.create(sensor).subscribe({
         next: () => {
           this.changedEvent.emit();

@@ -12,6 +12,10 @@
 
 - ASP.NET Minimal API up to date docs with examples: https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api
 
+- [Web app url](https://localhost:60958/)
+- [IoT API Swagger](http://localhost:5141/swaggger)
+- [Web API Swagger](http://localhost:5162/swaggger)
+
 # Tasks
 
 - 18 Create very basic navigation menu

@@ -7,6 +7,7 @@
         <li>Status: {{device.status || "unknown"}}</li>
     </ul>
     <app-device-editor-modal [device]="device" (changedEvent)="onDeviceChanged()">Edit</app-device-editor-modal>
+    <app-delete-button (deleteEvent)="deleteDevice(device)">Delete</app-delete-button>
     <h2>Sensors</h2>
     @if (!device.sensors) {
         <p>Loading...</p>
@@ -26,7 +27,7 @@
                             <li>Last value: </li>
                         </ul>
                         <app-sensor-editor [device]="device" [sensor]="sensor" (changedEvent)="onSensorChanged()">Edit</app-sensor-editor>
-                        <button (click)="deleteSensor(sensor)" class="btn">Delete</button>
+                        <app-delete-button (deleteEvent)="deleteSensor(sensor)">Delete</app-delete-button>
                     </li>
                 }
             </ul>

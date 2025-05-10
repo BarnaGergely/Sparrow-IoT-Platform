@@ -1,6 +1,7 @@
-@AuthApp.Server_HostAddress = http://localhost:5162/api/web/public
+@AuthApp.Server_HostAddress_Public = http://localhost:5162/api/web/public
+@AuthApp.Server_HostAddress_Protected = http://localhost:5162/api/web/protected
 
-POST {{AuthApp.Server_HostAddress}}/auth/register
+POST {{AuthApp.Server_HostAddress_Public}}/auth/register
 Content-Type: application/json
 
 {
@@ -10,7 +11,7 @@ Content-Type: application/json
 
 ###
 
-POST {{AuthApp.Server_HostAddress}}/auth/login?useCookies=true
+POST {{AuthApp.Server_HostAddress_Public}}/auth/login?useCookies=true
 Access-Control-Allow-Credentials: true
 Content-Type: application/json
 
@@ -21,7 +22,7 @@ Content-Type: application/json
 
 ###
 
-GET {{AuthApp.Server_HostAddress}}/weatherforecast
+GET {{AuthApp.Server_HostAddress_Protected}}/weatherforecast
 Access-Control-Allow-Credentials: true
 Accept: application/json
 

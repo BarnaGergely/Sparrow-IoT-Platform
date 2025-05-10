@@ -6,10 +6,11 @@ import { SensorsService } from '../../shared/services/sensors.service';
 import { MeasurementKind, Sensor, measurementKindToString } from '../../shared/models/sensor.model';
 import { DeviceEditorModalComponent } from "../../shared/components/devices/device-editor-modal/device-editor-modal.component";
 import { SensorEditorComponent } from "./sensor-editor/sensor-editor.component";
+import { DeleteButtonComponent } from "../../shared/components/delete-button/delete-button.component";
 
 @Component({
   selector: 'app-device',
-  imports: [RouterLink, DeviceEditorModalComponent, SensorEditorComponent],
+  imports: [RouterLink, DeviceEditorModalComponent, SensorEditorComponent, DeleteButtonComponent],
   templateUrl: './device.component.html',
   styleUrl: './device.component.scss'
 })
@@ -21,6 +22,9 @@ export class DeviceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
+      if (!params.has('id'))
+        throw new Error('No device id provided.');
+
       const id = params.get('id') as unknown as number;
       this.devicesService.getById(id).subscribe
         ((device: Device) => {
@@ -42,6 +46,10 @@ export class DeviceComponent implements OnInit {
 
   measurementKindToString(kind: MeasurementKind): string {
     return measurementKindToString(kind);
+  }
+
+  deleteDevice(device: Device) {
+    throw new Error('Method not implemented.');
   }
 
   deleteSensor(sensor: Sensor): void {
