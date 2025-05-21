@@ -18,11 +18,11 @@ export class SensorEditorComponent {
   private modalService = inject(NgbModal);
 
   @Input() sensor!: Sensor | undefined;
-  @Input() device!: Device;
+  @Input() deviceId!: number;
   @Output() changedEvent: EventEmitter<void> = new EventEmitter<void>();
   form = this.formBuilder.group({
     id: [0, []],
-    deviceId: [this.device.id, [Validators.required]],
+    deviceId: [this.deviceId, [Validators.required]],
     name: ['', [Validators.required]],
     kind: [MeasurementKind.Temperature, [Validators.required]],
   });
@@ -35,7 +35,7 @@ export class SensorEditorComponent {
   open(content: TemplateRef<any>) {
 
     if (this.sensor && this.isUpdate()) {
-      if (this.sensor?.deviceId !== this.device.id) {
+      if (this.sensor?.deviceId !== this.deviceId) {
         console.error('Sensor does not belong to device.');
         return;
       }
@@ -51,7 +51,7 @@ export class SensorEditorComponent {
     } else {
       this.form.setValue({
         id: 0,
-        deviceId: this.device.id,
+        deviceId: this.deviceId,
         name: '',
         kind: 0,
       });

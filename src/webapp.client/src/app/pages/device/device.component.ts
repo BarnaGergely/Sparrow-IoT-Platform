@@ -7,6 +7,7 @@ import { MeasurementKind, Sensor, measurementKindToString } from '../../shared/m
 import { DeviceEditorModalComponent } from "../../shared/components/devices/device-editor-modal/device-editor-modal.component";
 import { SensorEditorComponent } from "./sensor-editor/sensor-editor.component";
 import { DeleteButtonComponent } from "../../shared/components/delete-button/delete-button.component";
+import { MeasurementsService } from '../../shared/services/measurements.service';
 
 @Component({
   selector: 'app-device',
@@ -17,6 +18,7 @@ import { DeleteButtonComponent } from "../../shared/components/delete-button/del
 export class DeviceComponent implements OnInit {
   private devicesService: DevicesService = inject(DevicesService);
   private sensorsService: SensorsService = inject(SensorsService);
+  private measurementsService: MeasurementsService = inject(MeasurementsService);
   private route: ActivatedRoute = inject(ActivatedRoute);
   device?: Device;
 
@@ -31,6 +33,13 @@ export class DeviceComponent implements OnInit {
           this.device = device;
           this.sensorsService.getByDeviceId(device.id).subscribe((sensors: Sensor[]) => {
             device.sensors = sensors;
+
+            device.sensors.forEach(sensor => {
+              this.measurementsService.getBySensor(sensor).subscribe((measurement) => {
+                sensor.measurements = measurement;
+              });
+            });
+            
           });
         });
     });

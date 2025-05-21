@@ -12,7 +12,9 @@
     @if (!device.sensors) {
         <p>Loading...</p>
     } @else {
-        <app-sensor-editor [device]="device" (changedEvent)="onSensorChanged()">Add</app-sensor-editor>
+        @if (device.sensors) {
+            <app-sensor-editor [deviceId]="device.id" (changedEvent)="onSensorChanged()">Add</app-sensor-editor>
+        }
         @if (device.sensors && device.sensors.length <= 0) {
             <p>No sensors found</p>
         } @else {
@@ -23,10 +25,10 @@
                         <ul>
                             <li>ID: {{ sensor.id }}</li>
                             <li>Type: {{measurementKindToString(sensor.kind)}}</li>
-                            <li>Last seen: </li>
-                            <li>Last value: </li>
+                            <li>Last seen: {{sensor.measurements?.[0]?.receptionTime || "unknown"}}</li>
+                            <li>Last value: {{sensor.measurements?.[0]?.value || "unknown"}}</li>
                         </ul>
-                        <app-sensor-editor [device]="device" [sensor]="sensor" (changedEvent)="onSensorChanged()">Edit</app-sensor-editor>
+                        <app-sensor-editor [deviceId]="device.id" [sensor]="sensor" (changedEvent)="onSensorChanged()">Edit</app-sensor-editor>
                         <app-delete-button (deleteEvent)="deleteSensor(sensor)">Delete</app-delete-button>
                     </li>
                 }
