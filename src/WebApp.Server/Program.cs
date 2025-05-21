@@ -6,13 +6,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Service registration
 builder.Services
-    .AddWebAppServerServices()
-    .AddWebAppServerDependencies();
+    .AddApplicationServices()
+    .AddInfrastructureServices()
+    .AddWebAppServerServices();
+
 
 // Dependency injection
 builder.Services
     .AddApplicationDependencies()
-    .AddInfrastructureDependencies();
+    .AddInfrastructureDependencies()
+    .AddWebAppServerDependencies();
 
 var app = builder.Build();
 
