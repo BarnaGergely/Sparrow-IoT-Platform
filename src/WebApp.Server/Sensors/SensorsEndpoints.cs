@@ -2,7 +2,7 @@
 using Domain.IotDevice.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApp.Server;
+namespace WebApp.Server.Sensors;
 
 public static class SensorsEndpoints
 {

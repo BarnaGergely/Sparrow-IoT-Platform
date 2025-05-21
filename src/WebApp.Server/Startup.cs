@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using WebApp.Server.Auth;
 using WebApp.Server.Devices;
 using WebApp.Server.Measurements;
+using WebApp.Server.Sensors;
 
 
 namespace WebApp.Server;

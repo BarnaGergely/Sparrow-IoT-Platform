@@ -17,6 +17,7 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webapp.client", "src\webapp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{2C2D5666-01D1-4987-AEF2-033B7B8242C6}"
 	ProjectSection(SolutionItems) = preProject
+		example.json = example.json
 		README.md = README.md
 	EndProjectSection
 EndProject

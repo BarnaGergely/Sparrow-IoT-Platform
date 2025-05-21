@@ -1,4 +1,4 @@
-﻿namespace WebApp.Server;
+﻿namespace WebApp.Server.OpenApiDocs;
 public static class OpenApiEndpoints
 {
     public static IEndpointRouteBuilder MapOpenApiEndpoints(this IEndpointRouteBuilder group)

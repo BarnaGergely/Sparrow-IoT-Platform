@@ -1,0 +1,13 @@
+{
+  "deviceId": number = 0,
+  "measurementTime": string? = "2025-05-02T13:11:39.645Z",
+  "measurements": Array<Measurement> = [
+    {
+      "sensorId": number = 0,
+      "value": number = 0.0,
+      "createdAt": string? = "2025-05-02T13:11:39.645Z"
+    },
+    …
+  ]
+}
+  
