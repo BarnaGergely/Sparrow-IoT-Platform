@@ -2,17 +2,15 @@ import { Component, EventEmitter, inject, Input, Output, signal, TemplateRef } f
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { SensorsService } from '../../../shared/services/sensors.service';
-import { MeasurementKind, Sensor } from '../../../shared/models/sensor.model';
-import { Device } from '../../../shared/models/device.model';
-
+import { SensorsService } from '../../../services/sensors.service';
+import { MeasurementKind, Sensor } from '../../../models/sensor.model';
 @Component({
-  selector: 'app-sensor-editor',
+  selector: 'app-sensor-editor-modal',
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './sensor-editor.component.html',
-  styleUrl: './sensor-editor.component.scss'
+  templateUrl: './sensor-editor-modal.component.html',
+  styleUrl: './sensor-editor-modal.component.scss'
 })
-export class SensorEditorComponent {
+export class SensorEditorModalComponent {
   private formBuilder: FormBuilder = inject(FormBuilder);
   private sensorsService: SensorsService = inject(SensorsService);
   private modalService = inject(NgbModal);
@@ -35,8 +33,8 @@ export class SensorEditorComponent {
   open(content: TemplateRef<any>) {
 
     if (this.sensor && this.isUpdate()) {
-      if (this.sensor?.deviceId !== this.deviceId) {
-        console.error('Sensor does not belong to device.');
+      if (this.sensor?.deviceId != this.deviceId) {
+        console.error('Sensor does not belong to device: ');
         return;
       }
 

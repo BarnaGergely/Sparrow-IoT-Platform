@@ -1,0 +1,44 @@
+@if (sensor && deviceId) {
+    <h1>{{sensor.name}}</h1>
+    <ul>
+        <li>ID: {{sensor.id}}</li>
+        <li>Type: {{measurementKindToString(sensor.kind)}}</li>
+    </ul>
+
+    <app-sensor-editor-modal [deviceId]="deviceId" [sensor]="sensor" (changedEvent)="onSensorChanged()">Edit</app-sensor-editor-modal>
+    <app-delete-button (deleteEvent)="deleteSensor(sensor)">Delete</app-delete-button>
+
+    <h2>Measurements</h2>
+    @if (!sensor.measurements) {
+        <div class="spinner-border" role="status"></div>
+
+    } @else if (sensor.measurements.length === 0) {
+        <p>No measurements received yet</p>
+
+    } @else {
+        <button class="btn btn-lg btn-outline-secondary" (click)="downloadCsv()">Download</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Raw Value</th>
+                    <th scope="col">Reception Time</th>
+                    <th scope="col">Measurement Time</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for (measurement of sensor.measurements; track $index) {
+                <tr>
+                    <th scope="row">{{$index + 1}}</th>
+                    <td>{{measurement.value}}</td>
+                    <td>{{measurement.receptionTime}}</td>
+                    <td>{{measurement.measurementTime}}</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+
+} @else {
+    <div class="spinner-border" role="status"></div>
+}

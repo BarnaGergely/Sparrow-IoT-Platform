@@ -8,10 +8,10 @@ Accept: application/json
 POST {{Startup_HostAddress}}/measure/
 Content-Type:  application/json
 {
-  "deviceId": 1,
+  "deviceId": 10,
   "measurements": [
     {
-      "sensorId": 1,
+      "sensorId": 8,
       "value": 12.4
     }
   ]

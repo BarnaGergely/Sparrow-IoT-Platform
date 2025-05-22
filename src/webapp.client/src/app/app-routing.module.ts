@@ -9,6 +9,7 @@ import { DevicesComponent } from './pages/devices/devices.component';
 import { HomePublicComponent } from './pages/home-public/home-public.component';
 import { DashboardsComponent } from './pages/dashboards/dashboards.component';
 import { DeviceComponent } from './pages/device/device.component';
+import { SensorComponent } from './pages/sensor/sensor.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'devices', component: DevicesComponent },
       { path: 'devices/:id', component: DeviceComponent },
       { path: 'dashboards', component: DashboardsComponent },
+      { path: 'devices/:deviceId/:sensorId', component: SensorComponent },
     ]
   },
   { path: '', component: HomePublicComponent },

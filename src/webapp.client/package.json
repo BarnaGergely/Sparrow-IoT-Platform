@@ -24,6 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
+    "export-to-csv": "^1.4.0",
     "jest-editor-support": "*",
     "run-script-os": "*",
     "rxjs": "~7.8.0",

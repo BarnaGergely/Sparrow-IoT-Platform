@@ -1,17 +1,17 @@
-import { Component, inject, Input, OnInit, signal, Signal } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Device } from '../../shared/models/device.model';
 import { DevicesService } from '../../shared/services/devices.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SensorsService } from '../../shared/services/sensors.service';
 import { MeasurementKind, Sensor, measurementKindToString } from '../../shared/models/sensor.model';
 import { DeviceEditorModalComponent } from "../../shared/components/devices/device-editor-modal/device-editor-modal.component";
-import { SensorEditorComponent } from "./sensor-editor/sensor-editor.component";
 import { DeleteButtonComponent } from "../../shared/components/delete-button/delete-button.component";
 import { MeasurementsService } from '../../shared/services/measurements.service';
+import { SensorEditorModalComponent } from '../../shared/components/sensors/sensor-editor-modal/sensor-editor-modal.component';
 
 @Component({
   selector: 'app-device',
-  imports: [RouterLink, DeviceEditorModalComponent, SensorEditorComponent, DeleteButtonComponent],
+  imports: [RouterLink, DeviceEditorModalComponent, DeleteButtonComponent, SensorEditorModalComponent],
   templateUrl: './device.component.html',
   styleUrl: './device.component.scss'
 })
@@ -39,17 +39,13 @@ export class DeviceComponent implements OnInit {
                 sensor.measurements = measurement;
               });
             });
-            
+
           });
         });
     });
   }
 
   onDeviceChanged(): void {
-    this.ngOnInit();
-  }
-
-  onSensorChanged() {
     this.ngOnInit();
   }
 
@@ -61,9 +57,7 @@ export class DeviceComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  deleteSensor(sensor: Sensor): void {
-    this.sensorsService.delete(sensor).subscribe(() => {
-      this.ngOnInit();
-    });
-  }
+  onSensorChanged(): void {
+    this.ngOnInit();
+}
 }
