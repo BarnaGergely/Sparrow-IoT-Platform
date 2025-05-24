@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 using Application.IotDevice.Measurements;
 using IotRestApi.Measurements;
@@ -26,7 +25,7 @@ public static class Startup
         return services;
     }
 
-    public static IEndpointRouteBuilder ConfigureIotRestApiEndpoints(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder ConfigureIotRestApi(this IEndpointRouteBuilder app)
     {
         RouteGroupBuilder groupBuilder = app.MapGroup("iot")
             .WithName("IoT Devices")

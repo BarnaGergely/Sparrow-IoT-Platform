@@ -1,32 +1,24 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using static WebApp.Server.Startup;
 
 namespace WebApp.Server;
-
-public static class Startup
+public static class DeviceEndpoints
 {
-    public static IServiceCollection AddWebAppServerServices(this IServiceCollection services)
+    public static IEndpointRouteBuilder MapDeviceEndpoints(this IEndpointRouteBuilder group)
     {
-
-        return services;
-    }
-
-    public static IServiceCollection AddWebAppServerDependencies(this IServiceCollection services)
-    {
-
-        return services;
-    }
-
-    public static WebApplication ConfigureWebAppServer(this WebApplication app)
-    {
+        group.MapGet("device", () =>
+        {
+            return Results.Ok("asd");
+        });
 
         var summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        app.MapGet("/weatherforecast", () =>
+        group.MapGet("/weatherforecast", () =>
         {
             var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
@@ -40,8 +32,11 @@ public static class Startup
         })
         .WithName("GetWeatherForecast");
 
-        app.MapFallbackToFile("/index.html"); // TODO: Why does this needed?
+        return group;
+    }
 
-        return app;
+    internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+    {
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 }

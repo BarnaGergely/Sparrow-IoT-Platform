@@ -32,7 +32,8 @@ if (app.Environment.IsDevelopment())
 // app.UseExceptionHandler(); // TODO: Add exception handling middleware
 
 // REST Endpoint registration
-app.ConfigureIotRestApiEndpoints()
-    .ConfigureWebAppEndpoints();
+app.MapGroup("api")
+    .ConfigureIotRestApi()
+    .ConfigureWebAppServer();
 
 app.Run();
