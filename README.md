@@ -14,7 +14,10 @@
 
 - [Web app url](https://localhost:60958/)
 - [IoT API Swagger](http://localhost:5141/swaggger)
+- [IoT API Swagger HTTPS](https://localhost:7208/swagger/index.html)
 - [Web API Swagger](http://localhost:5162/swaggger)
+- [Web API Swagger HTTPS](https://localhost:7131/swagger/index.html)
+- [Web API Open API](https://localhost:7131/openapi/v1.json)
 
 # Tasks
 
