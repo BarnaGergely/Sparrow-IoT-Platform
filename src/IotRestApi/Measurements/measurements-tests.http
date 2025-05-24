@@ -1,4 +1,13 @@
+<<<<<<<< HEAD:src/IotRestApi/Measurements/measurements-tests.http
 @Startup_HostAddress = http://localhost:5141/api/iot
+========
+@Startup_HostAddress = http://localhost:5105/iot
+
+GET {{Startup_HostAddress}}/hello/
+#Accept: application/json
+
+###
+>>>>>>>> main:src/IotRestApi/Measurements/MeasurementsEndpoints.http
 
 GET {{Startup_HostAddress}}/measure/
 Accept: application/json
